@@ -18,7 +18,7 @@ const Ezara = () => {
   ];
 
   return (
-    <div className="client-carousel py-32 justify-between  flex lg:flex-row flex-col lg:items-center overflow-hidden bg-white ">
+    <div className="client-carousel py-24 justify-between  flex lg:flex-row flex-col lg:items-center overflow-hidden bg-white ">
         <h1 className="text-4xl  whitespace-nowrap lg:translate-x-32  leading-relaxed font-semibold relative  uppercase text-gray-800 my-10 lg:my-0 ml-6 ">
           Our brand
         <h5 className="lg:text-7xl text-6xl whitespace-nowrap  absolute lg:-top-12 -top-10     leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">

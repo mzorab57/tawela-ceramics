@@ -38,7 +38,7 @@ const VideoCard = ({ number, title, description, videoSrc, poster }) => {
 
       {/* Video Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
           <div className="relative bg-black rounded shadow-lg overflow-hidden max-w-3xl w-full">
             {/* Video */}
             <video

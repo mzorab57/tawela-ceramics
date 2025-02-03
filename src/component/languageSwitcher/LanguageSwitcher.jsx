@@ -38,7 +38,7 @@ const LanguageSwitcher = () => {
           setIsOpen(!isOpen); // Toggle dropdown visibility
         }}
         className={`cursor-pointer py-2 px-4 rounded-lg text-center ${
-          isOpen ? "text-primary" : "text-white"
+          isOpen ? "text-primary" : `${location === "/gallery" || location === "/video" ? 'text-white': ""}`
         } hover:text-primary`}
       >
         <GrLanguage size={25} />
@@ -47,8 +47,8 @@ const LanguageSwitcher = () => {
       {/* Dropdown */}
       <div
         className={`absolute text-center -right-10 mt-2 w-32 py-2 bg-white border-2 border-primary rounded-lg shadow-xl text-black z-50 transition-all duration-300 ease-in-out transform ${
-          isOpen ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"
-        }`}
+          isOpen ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none "
+        } `}
       >
         {/* English */}
         <div

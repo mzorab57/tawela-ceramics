@@ -1,7 +1,8 @@
 import React from "react";
 import services_vide from "/assets/videos/tvbg.mp4";
 import AnimatedComponent from "../../component/animations/AnimatedComponent";
-import { Link } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
+import { Link  } from "react-router-dom";
 
 const Hero = () => {
   // Define the text you want to display
@@ -21,9 +22,9 @@ const Hero = () => {
         {/* right line */}
       <div className="w-24 h-screen hidden lg:block border border-b-0 bg-transparent absolute left-0 border-gray-500 z-10">
         <ul className="size-full  flex flex-col justify-center gap-y-32 ">
-        <li className="-rotate-90"><Link to="/">INSTAGRAM</Link></li>
-        <li className="-rotate-90"><Link to="/">FACEBOOK</Link></li>
-        <li className="-rotate-90"><Link to="/">TIKTOK</Link></li>
+        <li className="-rotate-90 cursor-pointer"><Link to="https://www.facebook.com/share/19pAjXfhq5/">INSTAGRAM</Link></li>
+        <li className="-rotate-90"><Link to="https://www.instagram.com/tawela_ceramics?igsh=MWV3cnoxazJieGd5aw==">FACEBOOK</Link></li>
+        <li className="-rotate-90"><Link to="https://www.tiktok.com/@tawela.ceramic?fbclid=PAY2xjawIODxNleHRuA2FlbQIxMQABpqIjyzjP8V9LH-E1ZZvbjzWSaHFA5Moo0ppmW6p-hDjeodaFhbYuVNxypg_aem_X61Lm_VqawVpY93bE00m6g">TIKTOK</Link></li>
         </ul>
       </div>
         <video
@@ -31,6 +32,7 @@ const Hero = () => {
           autoPlay
           loop
           muted
+          playsInline
           className="w-full h-screen object-cover brightness-40  "
         ></video>
         {/* Centered Content */}
@@ -48,12 +50,12 @@ const Hero = () => {
           </h1>
             <AnimatedComponent animationType="fade-up" dataAosDuration="1000" >
           <div className="flex space-x-4  border border-gray-400">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3  text-md font-jost text-lg flex items-center space-x-2">
-              <Link to="about" smooth={true} duration={500}>Read More</Link>
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-white lg:px-6 px-2 lg:py-3 py-1.5 whitespace-nowrap  text-md font-jost text-lg flex items-center space-x-2">
+              <LinkScroll to="about" smooth={true} duration={500}>Read More</LinkScroll>
               <span>→</span>
             </button>
-            <button className=" hover:bg-gray-100 text-gray-400 px-6 py-3   font-jost text-lg flex items-center space-x-2">
-           <Link to="contacts" smooth={true} duration={500}>Get in Touch</Link>
+            <button className=" hover:bg-gray-100 text-gray-400 lg:px-6 px-2 lg:py-3 py-1.5  whitespace-nowrap font-jost text-lg flex items-center space-x-2">
+           <LinkScroll to="contacts" smooth={true} duration={500}>Get in Touch</LinkScroll>
               <span>→</span>
             </button>
           </div>

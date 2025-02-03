@@ -36,7 +36,7 @@ const AwardsSection = () => {
   ];
 
   return (
-    <section className="w-full  py-16 px-4 max-w-[1500px]   mx-auto">
+    <section className="w-full  py-16 px-4 max-w-[1500px] overflow-hidden  mx-auto">
       <div className="flex lg:flex-row flex-col justify-between  ">
         <div className="text-start w-full lg:w-1/3 mb-12 overflow-hidden ">
           <div className="lg:translate-x-10 ">

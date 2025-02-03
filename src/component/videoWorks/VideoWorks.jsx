@@ -22,34 +22,30 @@ const VideoWorks = () => {
         <VideoText />
       </AnimatedComponent>
       <main className="md:w-4/3 mt-8 lg:mt-0">
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4">
-          <AnimatedComponent animationType="fade-up">
-            <VideoCard
-              number="01"
-              title={t("videoCards.0.title")}
-              description={t("videoCards.0.description")}
-              videoSrc={services_vide}
-              poster="/assets/images/gallery/g(4).JPG"
-            />
-          </AnimatedComponent>
-          <AnimatedComponent animationType="fade-up">
-            <VideoCard
-              number="03"
-              title={t("videoCards.1.title")}
-              description={t("videoCards.1.description")}
-              videoSrc={services_vide2}
-              poster="/assets/images/gallery/g(15).JPG"
-            />
-          </AnimatedComponent>
-          <AnimatedComponent animationType="fade-up">
-            <VideoCard
-              number="02"
-              title={t("videoCards.2.title")}
-              description={t("videoCards.2.description")}
-              videoSrc={services_vide3}
-              poster="/assets/images/gallery/g(16).JPG"
-            />
-          </AnimatedComponent>
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 z-[0]">
+          <VideoCard
+            number="01"
+            title="Ceramics"
+            description="Beauty your home"
+            videoSrc={services_vide}
+            poster="/assets/images/gallery/g(4).JPG"
+          />
+
+          <VideoCard
+            number="03"
+            title="Porcelain"
+            description="Beauty your home"
+            videoSrc={services_vide2}
+            poster="/assets/images/gallery/g(15).JPG"
+          />
+
+          <VideoCard
+            number="02"
+            title="Granit"
+            description="Beauty your home"
+            videoSrc={services_vide3}
+            poster="/assets/images/gallery/g(16).JPG"
+          />
         </div>
       </main>
     </div>

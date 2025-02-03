@@ -10,7 +10,7 @@ const Navbar = ({ setMenuOpen }) => {
   const { t } = useTranslation(); // Destructure the translation function
   const [color, setColor] = useState(false);
   const [isOpenMenu, setOpenMenu] = useState(false);
-  const location = useLocation().pathname
+  const location = useLocation().pathname;
 
   const changeHeaderColor = () => {
     window.scrollY >= 20 ? setColor(true) : setColor(false);
@@ -25,28 +25,37 @@ const Navbar = ({ setMenuOpen }) => {
     });
   };
 
+  // Determine the text color: if on gallery page, use gray; otherwise, use white.
+  const textColorClass = location === "/gallery" || location === "/video" ? "text-gray-800" : "text-white";
+
   return (
-    <div className={`Navbar    text-white flex justify-between lg:flex-col`}>
+    <div className={`Navbar ${textColorClass} flex justify-between lg:flex-col`}>
       {/* Main Navbar */}
       <div
-        className={`fixed top-0  border border-gray-500 z-50 flex justify-between items-center  h-20    w-full px-6 lg:px-10 ${
-          color && "fixed top-0 py-4 ease-in transition-all z-30 bg-black/50"
+        className={`fixed top-0 ${location === "/gallery" || location === "/video" ? 'border-none': "border border-gray-500"}  z-50 flex justify-between items-center h-20 w-full px-6 lg:px-10 ${
+          color && `fixed top-0 py-4 ease-in transition-all z-30 bg-black/50 ${location === "/gallery" || location === "/video" ? 'text-white': ""}`
         }`}
       >
         {/* Logo */}
         <div>
           <Link to="/">
-            <img src={tawela_ceramic_logo} alt="tawela Logo" className="size-16 mt-3  -translate-x-7" />
+            <img
+              src={tawela_ceramic_logo}
+              alt="tawela Logo"
+              className="size-16 mt-3 -translate-x-7 mx-3 lg:px-0"
+            />
           </Link>
         </div>
 
         {/* Navigation Menu - Hidden on Mobile */}
-        <ul className={`hidden lg:flex justify-center items-center text-xl space-x-8 rtl:space-x-8  h-full  font-jost font-medium`}>
-          <li  onMouseMove={() => setMenuOpen(false)}>
+        <ul
+          className={`hidden lg:flex justify-center items-center text-xl space-x-8 rtl:space-x-8 h-full font-jost font-medium`}
+        >
+          <li onMouseMove={() => setMenuOpen(false)}>
             <Link
               to="/"
               onClick={() => scrollToSection("hero")}
-              className="hover:text-yellow-500 cursor-pointer h-full   px-6"
+              className="hover:text-yellow-500 cursor-pointer h-full px-6"
             >
               {t("home")}
             </Link>
@@ -56,24 +65,31 @@ const Navbar = ({ setMenuOpen }) => {
             <Link
               to="/"
               onClick={() => scrollToSection("about")}
-              className="hover:text-yellow-500 cursor-pointer "
+              className="hover:text-yellow-500 cursor-pointer"
             >
               {t("about")}
             </Link>
           </li>
 
           {/* Menu */}
-          <li onMouseMove={() => setMenuOpen(false)} onClick={()=> window.scrollTo(0,0)} className="group relative">
+          <li
+            onMouseMove={() => setMenuOpen(false)}
+            onClick={() => window.scrollTo(0, 0)}
+            className="group relative"
+          >
             <Link to="/gallery" className="hover:text-yellow-500">
-            Gallery
+              Gallery
               <i className="las la-angle-down ml-1"></i>
             </Link>
           </li>
 
-          {/* video */}
-          <li onMouseMove={() => setMenuOpen(true)} onClick={()=> window.scrollTo(0,0)}>
-          <Link to="/video" className="hover:text-yellow-500">
-            Video
+          {/* Video */}
+          <li
+            onMouseMove={() => setMenuOpen(true)}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <Link to="/video" className="hover:text-yellow-500">
+              Video
               <i className="las la-angle-down ml-1"></i>
             </Link>
           </li>
@@ -93,9 +109,8 @@ const Navbar = ({ setMenuOpen }) => {
         <LanguageSwitcher />
       </div>
       {/* Mobile Menu */}
-      <MobileMenu setOpenMenu={setOpenMenu} isOpenMenu={isOpenMenu} />
+      <MobileMenu setOpenMenu={setOpenMenu} isOpenMenu={isOpenMenu} color={color} />
     </div>
-   
   );
 };
 

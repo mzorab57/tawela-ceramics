@@ -21,11 +21,11 @@ const Footer = () => {
       name="contacts"
       className=" text-gray-800 font-jost bg-slate-50 py-20 border-t-2  border-b-2 "
     >
-      <div className="container mx-auto px-4 max-w-[1400px]  ">
+      <div className="container mx-auto px-4 max-w-[1400px] overflow-hidden ">
         <img
           src="https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/1.png"
           alt="footer"
-          className="absolute right-0 w-56 animate-custom-bounce"
+          className="absolute right-0 lg:w-56 w-32 animate-custom-bounce"
         />
         <div className="flex flex-col md:flex-row justify-between pt-10 items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* Logo Section */}

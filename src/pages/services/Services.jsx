@@ -33,14 +33,14 @@ const Services = () => {
     <div className=" pt-20  ">
       <div className="grid lg:grid-cols-2 max-w-[1650px] overflow-hidden mx-auto w-full justify-start px-10 items-center gap-20 ">
         <AnimatedComponent animationType="fade-right" dataAosDuration="500">
-          <div className="w-full pt-9 pb-10">
+          <div className="w-full pt-9 lg:pb-10">
             <h1 className="text-4xl pb-8 leading-relaxed font-jost font-medium relative uppercase text-gray-800 ">
               Products
               <h5 className="lg:text-7xl text-6xl   absolute lg:-top-4 -top-10   -translate-x-7  leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
                 Products
               </h5>
             </h1>
-            <p className=" mb-16 lg:text-2xl lg:max-w-xl  text-slate-500">
+            <p className=" lg:mb-16 lg:text-2xl lg:max-w-xl  text-slate-500">
               Our car oil is engineered to reduce wear and tear, ensuring your
               engine runs smoothly even under the toughest conditions.
             </p>
