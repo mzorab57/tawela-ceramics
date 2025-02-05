@@ -176,31 +176,32 @@ const Projects = () => {
       <section className="navigation">
         <div className="relative">
           <img
-            src="/assets/images/gallery/g(12).JPG?url"
+            src="/assets/images/gallery/bgProtfolio.webp"
             alt="background"
             className="object-cover h-[500px] w-full"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-white via-transparent to-transparent">
-            <h2 className="text-3xl lg:text-4xl text-white  font-jost">
-              Our Project
-            </h2>
-            <ul className="flex justify-center space-x-2 text-gray-300 mt-4">
+          
+            <ul className="flex justify-center space-x-2 text-gray-300 mt-4  p-2 px-5">
               <li>
                 <Link
                   to="/"
-                  className="text-yellow-500 text-xl font-jost font-medium"
+                  className="text-white text-xl font-jost font-medium"
                 >
                   Home
                 </Link>
               </li>
-              <li className="text-yellow-500 text-xl font-jost font-medium">
-                / Gallery
+              <li className="text-white text-xl font-jost font-medium">
+                - - Portfolio
               </li>
             </ul>
           </div>
         </div>
       </section>
-
+      <div className=" w-full text-center py-10">
+        <h1 className="text-2xl text-slate-400 py-3">[ our portfolio ]</h1>
+        <p className="text-4xl lg:text-5xl text-gray-600 font-medium" >Some of Our Works and <br/> Case Studies for Clients</p>
+      </div>
       {/* Filter Options */}
       <CategoryFilter
         activeFilter={activeFilter}

@@ -25,15 +25,15 @@ const Navbar = ({ setMenuOpen }) => {
     });
   };
 
-  // Determine the text color: if on gallery page, use gray; otherwise, use white.
-  const textColorClass = location === "/gallery" || location === "/video" ? "text-gray-800" : "text-white";
+  // Determine the text color: if on portfolio page, use gray; otherwise, use white.
+  const textColorClass = location === "/portfolio" || location === "/video" ? "text-gray-800" : "text-white";
 
   return (
     <div className={`Navbar ${textColorClass} flex justify-between lg:flex-col`}>
       {/* Main Navbar */}
       <div
-        className={`fixed top-0 ${location === "/gallery" || location === "/video" ? 'border-none': "border border-gray-500"}  z-50 flex justify-between items-center h-20 w-full px-6 lg:px-10 ${
-          color && `fixed top-0 py-4 ease-in transition-all z-30 bg-black/50 ${location === "/gallery" || location === "/video" ? 'text-white': ""}`
+        className={`fixed top-0 ${location === "/portfolio" || location === "/video" ? 'border-none': "border border-gray-500"}  z-50 flex justify-between items-center h-20 w-full px-6 lg:px-10 ${
+          color && `fixed top-0 py-4 ease-in transition-all z-30 bg-black/50 ${location === "/portfolio" || location === "/video" ? 'text-white': ""}`
         }`}
       >
         {/* Logo */}
@@ -63,8 +63,8 @@ const Navbar = ({ setMenuOpen }) => {
 
           <li onMouseMove={() => setMenuOpen(false)}>
             <Link
-              to="/"
-              onClick={() => scrollToSection("about")}
+              to="/about"
+              onClick={() => window.scrollTo(0,0)}
               className="hover:text-yellow-500 cursor-pointer"
             >
               {t("about")}
@@ -77,8 +77,8 @@ const Navbar = ({ setMenuOpen }) => {
             onClick={() => window.scrollTo(0, 0)}
             className="group relative"
           >
-            <Link to="/gallery" className="hover:text-yellow-500">
-              Gallery
+            <Link to="/portfolio" className="hover:text-yellow-500">
+              Portfolio
               <i className="las la-angle-down ml-1"></i>
             </Link>
           </li>

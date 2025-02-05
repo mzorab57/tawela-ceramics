@@ -61,7 +61,7 @@ const Services = () => {
             'url("https://wowtheme7.com/tf/logistick/assets/images/shapes/features-bg.png")',
         }}
       >
-        <div className="grid grid-cols-2 lg:grid-cols-3 ">
+        <div className="grid  md:grid-cols-2 lg:grid-cols-3 ">
           {featuresData.map((feature, index) => (
             <AnimatedComponent
               animationType="fade-up"

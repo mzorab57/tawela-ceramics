@@ -19,13 +19,23 @@ const Footer = () => {
   return (
     <footer
       name="contacts"
-      className=" text-gray-800 font-jost bg-slate-50 py-20 border-t-2  border-b-2 "
+      className=" text-slate-100 font-jost bg-black/80 lg:py-20 relative "
     >
       <div className="container mx-auto px-4 max-w-[1400px] overflow-hidden ">
-        <img
+        {/* <img
           src="https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/1.png"
           alt="footer"
-          className="absolute right-0 lg:w-56 w-32 animate-custom-bounce"
+          className="absolute right-0 lg:w-56 w-32 animate-custom-bounce bg-white rounded-l-full"
+        /> */}
+         <img
+            src="https://archin-reactjs.vercel.app/home3_construction/assets/img/about_pat.png"
+            alt="Background Pattern"
+            className="absolute bottom-0 right-0 w-full  lg:w-1/3 opacity-50"
+          />
+        <img
+          src="https://html.rrdevs.net/artima/assets/imgs/footer-2/left-shape.png"
+          alt="footer"
+          className="absolute bottom-0 left-0  lg:w-fit w-80 "
         />
         <div className="flex flex-col md:flex-row justify-between pt-10 items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* Logo Section */}
@@ -42,7 +52,7 @@ const Footer = () => {
 
           {/* Working Hours Section */}
           <div className="md:w-1/4">
-            <h5 className="text-xl font-jost font-medium mb-4 border-b-2">
+            <h5 className="text-xl font-jost font-medium mb-4 border-b  pb pb-2 border-b-gray-500">
               {t("working_hours")}
             </h5>
             <ul>
@@ -63,7 +73,7 @@ const Footer = () => {
 
           {/* Contact Us Section */}
           <div className="md:w-1/4 ">
-            <h5 className="text-xl font-jost font-medium mb-4 border-b-2">
+            <h5 className="text-xl font-jost font-medium mb-4 border-b pb-2 border-b-gray-500">
               {t("contact_us")}
             </h5>
             <ul>
@@ -72,7 +82,7 @@ const Footer = () => {
                 <span className="font-jost font-medium text-lg pr-1">
                   Location:{" "}
                 </span>
-                <span className="text-gray-500">FFCJ+XRJ Yakmalla</span>
+                <Link to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`} className="text-gray-400">FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate</Link >
               </li>
               <li className="flex items-center mb-2 cursor-pointer ">
                 <i className="fas fa-envelope text-primary mr-2"></i>
@@ -81,7 +91,7 @@ const Footer = () => {
                 </span>
                 <Link
                   to={`mailto:${"info@tawelaceramic.com"}`}
-                  className="text-gray-500"
+                  className="text-gray-400"
                 >
                   info@tawelaceramic
                 </Link>
@@ -95,7 +105,7 @@ const Footer = () => {
                   href="https://wa.me/9467701411893"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:underline"
+                  className="text-gray-400 hover:underline"
                 >
                   +9467701411893
                 </a>
@@ -105,7 +115,7 @@ const Footer = () => {
 
           {/* Gallery Section */}
           <div className="md:w-1/4 w-full">
-            <h5 className="text-xl font-jost font-medium mb-4 border-b-2">
+            <h5 className="text-xl font-jost font-medium mb-4 border-b pb-2 border-b-gray-500">
               {t("gallery")}
             </h5>
             <div className="grid grid-cols-3 gap-2">
@@ -121,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t-2 border-t-gray-300 mt-14 pt-4 text-center text-gray-500">
+        <div className=" border-t-gray-300 mt-10 pt-4 text-center text-gray-400">
           &copy; 2024 {t("company_name")}. {t("all_rights_reserved")}.
         </div>
       </div>

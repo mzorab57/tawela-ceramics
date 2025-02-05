@@ -38,7 +38,7 @@ const LanguageSwitcher = () => {
           setIsOpen(!isOpen); // Toggle dropdown visibility
         }}
         className={`cursor-pointer py-2 px-4 rounded-lg text-center ${
-          isOpen ? "text-primary" : `${location === "/gallery" || location === "/video" ? 'text-white': ""}`
+          isOpen ? "text-primary" : `${location === "/portfolio" || location === "/video" ? 'text-white': ""}`
         } hover:text-primary`}
       >
         <GrLanguage size={25} />
@@ -51,7 +51,7 @@ const LanguageSwitcher = () => {
         } `}
       >
         {/* English */}
-        <div
+        {/* <div
           className="block px-4 py-2 text-sm hover:bg-primary/30 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
@@ -59,9 +59,9 @@ const LanguageSwitcher = () => {
           }}
         >
           English
-        </div>
+        </div> */}
         {/* Arabic */}
-        <div
+        {/* <div
           className="block px-4 py-2 text-sm hover:bg-primary/30 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
@@ -69,9 +69,9 @@ const LanguageSwitcher = () => {
           }}
         >
           Arabic
-        </div>
+        </div> */}
         {/* Kurdish */}
-        <div
+        {/* <div
           className="block px-4 py-2 text-sm hover:bg-primary/30 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
@@ -79,7 +79,7 @@ const LanguageSwitcher = () => {
           }}
         >
           Kurdish
-        </div>
+        </div> */}
       </div>
     </div>
   );

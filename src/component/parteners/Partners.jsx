@@ -38,14 +38,18 @@ const Partners = () => {
   return (
     <main
       dir="ltr"
-      className="flex flex-col items-center justify-between py-20 overflow-hidden relative bg-gradient-to-t from-teal-100/20 via-teal-50 to-teal-50/30 "
+      className="flex flex-col items-center justify-between py-12 lg:py-20  overflow-hidden relative bg-gradient-to-t from-teal-100/20 via-teal-50 to-teal-50/30 "
     >
       {/* Left Fog */}
-      <h4 className="text-orange-500  text-2xl lg:text-3xl mb-10 font-medium">
-        Our Collaborations
-      </h4>
+   
+      <h1 className="lg:text-4xl text-3xl w-full whitespace-nowrap text-center  leading-relaxed font-semibold relative  uppercase text-gray-800 my-10 lg:my-0  ">
+      Our Collaborations
+        <h5 className="lg:text-7xl text-4xl whitespace-nowrap  absolute lg:-top-12 -top-7  w-full     leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
+        Collaborations
+        </h5>
+        </h1>
 
-      <div className="relative overflow-hidden w-full">
+      <div className="relative mt-12 overflow-hidden w-full">
         <div className="flex gap-14  animate-scroll">
           {images.concat(images).map((src, index) => (
             <img

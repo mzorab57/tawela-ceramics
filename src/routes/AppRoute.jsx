@@ -11,6 +11,7 @@ import Gallery from "../pages/gallery/Gallery";
 import Projects from "../pages/projects/Projects";
 import Partners from "../component/parteners/Partners";
 import Video from "../pages/video/Video";
+import AboutUs from "../component/aboutUs/AboutUs";
 
 const AppRoutes = ({ setMenuOpen }) => {
   return (
@@ -23,7 +24,7 @@ const AppRoutes = ({ setMenuOpen }) => {
           element={
             <>
               <Hero />
-              <About />
+              <AboutUs />
               <Services />
               <Ezara />
               <VideoWorks />
@@ -33,7 +34,8 @@ const AppRoutes = ({ setMenuOpen }) => {
             </>
           }
         />
-        <Route path="/gallery" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Projects />} />
         <Route path="/video" element={<Video />} />
       </Routes>
     </div>

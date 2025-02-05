@@ -37,7 +37,7 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
   };
 
   return (
-    <header className={`lg:hidden fixed top-0 left-0 w-full h-14  z-50 ${!color && location.pathname === "/gallery" || !color && location.pathname === "/video" ? 'text-gray-900': "text-white"}`}>
+    <header className={`lg:hidden fixed top-0 left-0 w-full h-14  z-50 ${!color && location.pathname === "/portfolio" || !color && location.pathname === "/video" ? 'text-gray-900': "text-white"}`}>
       <div className="container flex justify-end p-4">
         <Hamburger
           toggled={isOpenMenu}
@@ -60,22 +60,22 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
               {t("home")}
             </Link>
             <Link
-              to="/"
-              onClick={() => scrollToSection("about")}
+              to="/about"
+              onClick={() => {setOpenMenu(false);  window.scrollTo(0,0)}}
               className="text-2xl hover:text-yellow-500"
             >
               {t("about")}
             </Link>
             <Link
-              to="/gallery"
-              onClick={() => setOpenMenu(false)}
+              to="/portfolio"
+              onClick={() => {setOpenMenu(false);  window.scrollTo(0,0)}}
               className="text-2xl hover:text-yellow-500"
             >
-             Gallery
+             Portfolio
             </Link>
             <Link
               to="/video"
-              onClick={() => setOpenMenu(false)}
+              onClick={() => {setOpenMenu(false); window.scrollTo(0,0)}}
               className="text-2xl hover:text-yellow-500"
             >
               Video
@@ -97,7 +97,7 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
                 }}
                 className="cursor-pointer py-2 px-4 rounded-lg hover:text-yellow-500"
               >
-                <GrLanguage size={25} className="mx-10" />
+                {/* <GrLanguage size={25} className="mx-10" /> */}
                 <div
                   className={`text-center mt-2 py-2 w-28 bg-white border-2 border-yeltext-yellow-500 rounded-lg shadow-xl text-black z-50 transform transition-all duration-500 ease-in-out ${
                     isOpen
@@ -138,7 +138,7 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
               <div className="flex gap-x-1 text-sm">
                 <span className="text-yellow-500">
                   {t("location")} :{" "}
-                  <span className="text-gray-800">FFCJ+XRJ Yakmalla</span>
+                  <Link to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`}className="text-gray-800">FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate</Link>
                 </span>
               </div>
               <div className="flex pt-5 space-x-3">
