@@ -7,38 +7,38 @@ const projects = [
     id: 1,
     category: "porcelain",
     title: <IoPlaySkipForwardOutline size={40} />, // You can adjust the icon size here
-    image: ["/assets/videos/tv1.mp4?url"],
-  },
-  {
-    id: 2,
-    category: "ceramics",
-    title: <IoPlaySkipForwardOutline size={40} />,
-    image: ["/assets/videos/tv2.mp4?url"],
-  },
-  {
-    id: 3,
-    category: "granit",
-    title: <IoPlaySkipForwardOutline size={40} />,
-    image: ["/assets/videos/tv3.MP4?url"],
-  },
-  {
-    id: 4,
-    category: "porcelain",
-    title: <IoPlaySkipForwardOutline size={40} />,
-    image: ["/assets/videos/tv1.mp4?url"],
+    video: ["/assets/videos/tv1.mp4?url"],
+    poster: "/assets/images/poster/poster1.jpg"
   },
   {
     id: 5,
     category: "ceramics",
     title: <IoPlaySkipForwardOutline size={40} />,
-    image: ["/assets/videos/tv2.mp4?url"],
+    video: ["/assets/videos/tv5.MP4?url"],
+    poster: "/assets/images/poster/poster2.jpg"
   },
   {
-    id: 6,
+    id: 2,
+    category: "ceramics",
+    title: <IoPlaySkipForwardOutline size={40} />,
+    video: ["/assets/videos/tv2.mp4?url"],
+    poster: "/assets/images/poster/poster5.jpg"
+  },
+  {
+    id: 3,
     category: "granit",
     title: <IoPlaySkipForwardOutline size={40} />,
-    image: ["/assets/videos/tv3.MP4?url"],
+    video: ["/assets/videos/tv3.MP4?url"],
+    poster: "/assets/images/poster/poster4.jpg"
   },
+  {
+    id: 4,
+    category: "porcelain",
+    title: <IoPlaySkipForwardOutline size={40} />,
+    video: ["/assets/videos/tv4.MP4?url"],
+    poster: "/assets/images/poster/poster3.jpg"
+  },
+ 
 ];
 
 const Video = () => {
@@ -47,7 +47,7 @@ const Video = () => {
 
   const openModal = (project) => {
     setSelectedProject(project);
-    setSelectedVideo(project.image[0]);
+    setSelectedVideo(project.video[0]);
   };
 
   const closeModal = () => {
@@ -57,7 +57,7 @@ const Video = () => {
 
   return (
     <div className="py-24 font-jost">
-      {/* Top Image Section */}
+      {/* Top video Section */}
       <section className="navigation">
         <div className="relative">
           <img
@@ -90,20 +90,24 @@ const Video = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 border-sky-200 px-4 mt-10 lg:mt-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  border-sky-200 px-4 mt-10 lg:mt-20">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="relative group overflow-hidden shadow-xl border-2 border-white cursor-pointer"
+            className="relative group overflow-hidden  border-2 border-white cursor-pointer"
             onClick={() => openModal(project)}
           >
             {/* Video Thumbnail */}
             <video
-              src={project.image[0]}
-              className="w-full h-auto object-cover rounded-sm"
+            poster={project.poster}
+              src={project.video[0]}
+              className="w-full h-auto  rounded-sm relative"
               muted
               playsInline
             />
+            {/* bo away aw bg black la sarw xwar video kanan dar nakwe am dw div */}
+            {/* <div className="bg-white z-20 absolute top-0 h-32 w-full"></div>
+            <div className="bg-white z-20 absolute bottom-0 h-32 w-full"></div> */}
             {/* Overlay with Play Icon */}
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
               <div className="bg-black bg-opacity-40 w-full h-full absolute top-0 left-0"></div>
@@ -111,6 +115,7 @@ const Video = () => {
             </div>
           </div>
         ))}
+        
       </div>
 
       {/* Modal */}

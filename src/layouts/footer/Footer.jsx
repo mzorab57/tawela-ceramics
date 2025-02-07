@@ -93,7 +93,7 @@ const Footer = () => {
                   to={`mailto:${"info@tawelaceramic.com"}`}
                   className="text-gray-400"
                 >
-                  info@tawelaceramic
+                  info@tawelaceramic.com
                 </Link>
               </li>
               <li className="flex items-center">
