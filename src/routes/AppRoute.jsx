@@ -12,6 +12,7 @@ import Projects from "../pages/projects/Projects";
 import Partners from "../component/parteners/Partners";
 import Video from "../pages/video/Video";
 import AboutUs from "../component/aboutUs/AboutUs";
+import OurHistory from "../pages/ourHistory/OurHistory";
 
 const AppRoutes = ({ setMenuOpen }) => {
   return (
@@ -37,6 +38,7 @@ const AppRoutes = ({ setMenuOpen }) => {
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Projects />} />
         <Route path="/video" element={<Video />} />
+        <Route path="/ourhistory" element={<OurHistory />} />
       </Routes>
     </div>
   );

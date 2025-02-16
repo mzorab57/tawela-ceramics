@@ -90,7 +90,7 @@ const Video = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  border-sky-200 px-4 mt-10 lg:mt-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 = border-sky-200 px-4 mt-10 lg:mt-20">
         {projects.map((project) => (
           <div
             key={project.id}

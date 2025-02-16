@@ -16,7 +16,7 @@ const AboutUs = () => {
 
   
   return (
-    <section name="about" className="relative  bg-gray-100 overflow-hidden ">
+    <section name="about" className="relative  bg-gray-100 overflow-hidden  ">
     <div className="container mx-auto px-4 lg:flex justify-between lg:items-start py-40 max-w-[1650px]   ">
       {/* Left Text Section */}
       <div className="w-full lg:w-1/3 mb-10  lg:mb-0 relative md:static  ">
@@ -43,7 +43,7 @@ const AboutUs = () => {
         <Link
           to="/about"
           onClick={()=> window.scrollTo(0,0)}
-          className="inline-block mt-14 text-gray-800 bg-white border px-4 py-2 uppercase tracking-wide hover:bg-yellow-500 hover:text-white transition"
+          className="inline-block translate-y-10 z-[1] text-gray-800 bg-white border px-4 py-2 uppercase tracking-wide hover:bg-yellow-500 hover:text-white transition"
         >
           About Us →
         </Link>
@@ -52,12 +52,17 @@ const AboutUs = () => {
         <img
           src="https://archin-reactjs.vercel.app/home3_construction/assets/img/about_pat.png"
           alt="Background Pattern"
-          className="absolute bottom-0 right-0 w-full lg:w-1/2 opacity-80"
+          className="absolute bottom-0  right-0 w-full lg:w-1/2 opacity-80"
+        />
+        <img
+          src="https://ambed-html.vercel.app/main-html/assets/images/shapes/quality-work-shape-4.png"
+          alt="Background left"
+          className="absolute bottom-0  left-0 w-full lg:w-1/2 opacity-50"
         />
       </div>
 
       {/* Numbers/Stats Section */}
-      <div className="flex flex-wrap lg:flex-nowrap gap-2 w-full justify-start lg:justify-end  -translate-y-14">
+      <div className="flex flex-wrap lg:flex-nowrap gap-2 w-full justify-start lg:justify-end  lg:-translate-y-14 -translate-y-3">
         <div className="flex sm:flex-row flex-col my-10">
           {/* Card 1 */}
           <motion.div

@@ -81,6 +81,13 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
               Video
             </Link>
             <Link
+              to="/ourhistory"
+              onClick={() => {setOpenMenu(false); window.scrollTo(0,0)}}
+              className="text-2xl hover:text-yellow-500"
+            >
+              Our History
+            </Link>
+            <Link
               to="/"
               onClick={() => scrollToSection("contacts")}
               className="text-2xl hover:text-yellow-500"

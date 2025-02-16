@@ -1,15 +1,15 @@
 import React from "react";
-import bg from "/assets/images/about/bgAbout.jpg";
+
 import { Link } from "react-router-dom";
 
-const AboutTop = () => {
+const AboutTop = ({img}) => {
   return (
     <section className="navigation">
       <div className="relative">
         <img
-          src={bg}
+          src={img}
           alt="background"
-          className="object-cover h-[500px] w-full"
+          className=" object-left object-cover brightness-50 h-[600px] w-full"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-white via-transparent to-transparent">
           <h2 className="text-3xl lg:text-4xl text-white  font-jost">
