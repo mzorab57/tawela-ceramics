@@ -19,7 +19,8 @@ const Footer = () => {
   return (
     <footer
       name="contacts"
-      className=" text-slate-100 font-jost bg-black/80 lg:py-20 relative "
+      className=" text-slate-100 font-jost  lg:py-20 relative "
+      style={{ backgroundImage: "url(https://arkio-next.netlify.app/images/footer.jpg)" }}
     >
       <div className="container mx-auto px-4 max-w-[1400px] overflow-hidden ">
         {/* <img

@@ -11,8 +11,10 @@ const VideoWorks = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="grid lg:flex lg:justify-between relative overflow-hidden items-center mt-32 mb-16 py-14 lg:pt-0 bg-gray-100">
-      <div className="text-3xl rtl:right-4 lg:-translate-x-7  md:text-4xl lg:text-5xl font-jost font-medium absolute -top-20 lg:top-0 left-4 lg:left-36 z-10">
+    <div
+    // style={{ backgroundImage: "url(https://arkio-next.netlify.app/images/testimonial/bg.png)" }} 
+      className="grid lg:flex lg:justify-between relative overflow-hidden items-center lg:mt-8  py-14 lg:pt-0 ">
+      <div className="text-3xl rtl:right-4 lg:-translate-x-7   md:text-4xl lg:text-5xl font-jost font-medium absolute -top-20 lg:top-0 left-4 lg:left-36 z-10">
         <AnimatedComponent animationType="fade-right">
           {t("Our Video Projects")}
         </AnimatedComponent>

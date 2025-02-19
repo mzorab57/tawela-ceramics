@@ -47,11 +47,13 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
           rounded
         />
         <div
+        style={{ backgroundImage: "url(https://arkio-next.netlify.app/images/testimonial/bg.png)" }}
+        //  style={{ backgroundImage: "url(https://arkio-next.netlify.app/images/footer.jpg)" }}
           className={`fixed top-0 inset-0 bg-white transform ${
             isOpenMenu ? "translate-y-0 top-20" : "translate-y-full"
           } transition-transform duration-500 ease-in-out z-40`}
         >
-          <nav className="flex text-gray-800 flex-col items-center justify-center h-full space-y-2">
+          <nav className="flex text-gray-600 flex-col items-center justify-center h-full space-y-2">
             <Link
               to="/"
               onClick={() => scrollToSection("hero")}
@@ -145,7 +147,7 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
               <div className="flex gap-x-1 text-sm">
                 <span className="text-yellow-500">
                   {t("location")} :{" "}
-                  <Link to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`}className="text-gray-800">FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate</Link>
+                  <Link to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`}className="text-gray-600">FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate</Link>
                 </span>
               </div>
               <div className="flex pt-5 space-x-3">

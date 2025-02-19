@@ -15,7 +15,7 @@ const VideoCard = ({ number, title, description, videoSrc, poster }) => {
   return (
     <>
       {/* Video Card */}
-      <div className="relative overflow-hidden cursor-pointer brightness-90 hover:brightness-110 duration-300 ease-out w-full lg:w-[350px] lg:h-[550px]">
+      <div className="relative border-2 shadow-2xl border-teal-500 overflow-hidden cursor-pointer brightness-90 hover:brightness-110 duration-300 ease-out w-full lg:w-[350px] lg:h-[550px]">
         <img
           src={poster}
           loading="lazy"

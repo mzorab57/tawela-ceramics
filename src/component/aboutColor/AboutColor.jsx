@@ -47,6 +47,7 @@ const AboutColor = () => (
         </div>
       </div>
 
+      {/* https://marblex.peacefulqode.co.in/wp-content/uploads/revslider/home-4-11/Banner-1-1.png */}
       {/* Right Column – Image */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
         <img
