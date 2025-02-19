@@ -28,11 +28,11 @@ const Footer = () => {
           alt="footer"
           className="absolute right-0 lg:w-56 w-32 animate-custom-bounce bg-white rounded-l-full"
         /> */}
-         <img
+         {/* <img
             src="https://archin-reactjs.vercel.app/home3_construction/assets/img/about_pat.png"
             alt="Background Pattern"
             className="absolute bottom-0 right-0 w-full  lg:w-1/3 opacity-50"
-          />
+          /> */}
         <img
           src="https://html.rrdevs.net/artima/assets/imgs/footer-2/left-shape.png"
           alt="footer"

@@ -20,6 +20,7 @@ export default {
         scroll: "scroll 20s linear infinite",
         "custom-bounce": "customBounce 1s ease-in-out infinite", 
         "custom-bounce2": "customBounce 1s ease-in infinite",
+        'spin-reverse': 'spin 1s linear infinite reverse',
       },
       keyframes: {
         scroll: {

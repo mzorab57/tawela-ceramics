@@ -43,7 +43,6 @@ const Ezara = () => {
   return (
     <div className="relative py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
       {/* Decorative elements */}
-   
 
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Header Section with enhanced styling */}
@@ -53,7 +52,7 @@ const Ezara = () => {
           <div className="relative text-gray-500">
             <h1 className="text-4xl  leading-relaxed font-jost font-medium relative uppercase text-gray-800 ">
               Industry Leaders
-              <h5 className=" lg:text-7xl text-6xl w-full  absolute  -top-10    leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
+              <h5 className=" lg:text-7xl text-5xl w-full  absolute -top-10 leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
                 Partnering
               </h5>
             </h1>
