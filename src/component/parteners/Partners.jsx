@@ -38,7 +38,7 @@ const Partners = () => {
   return (
     <main
       dir="ltr"
-      className="flex flex-col items-center justify-between py-12 lg:py-20  overflow-hidden relative bg-gradient-to-t from-gray-400 via-gray-50 to-gray-50/30 "
+      className="flex flex-col items-center justify-between py-12 lg:py-28  overflow-hidden relative "
     >
       {/* Left Fog */}
    

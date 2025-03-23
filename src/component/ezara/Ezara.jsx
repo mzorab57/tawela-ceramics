@@ -87,7 +87,7 @@ const Ezara = () => {
             {brandImages.map((item, index) => (
               <SwiperSlide key={index} className="group">
                 <div
-                  className=" backdrop-blur-sm p-3 py-4   shadow-[0_0_15px_rgba(0,0,0,0.05)] 
+                  className=" backdrop-blur-sm p-3 py-4  
                   hover:shadow-[0_0_25px_rgba(0,0,0,0.2)] transition-all duration-500 
                   hover:-translate-y-1 border border-gray-100/50"
                 >

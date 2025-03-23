@@ -1,12 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import LoadingScreen from "../component/loading/LoadingScreen";
+import AboutColor from "../component/aboutColor/AboutColor";
 
 // Lazy load components with delay to simulate network
 const Hero = lazy(
   () =>
     new Promise((resolve) =>
-      setTimeout(() => resolve(import("../pages/hero/Hero")), 4000)
+      setTimeout(() => resolve(import("../pages/hero/Hero")), 0)
     )
 );
 const AboutUs = lazy(
@@ -82,13 +83,14 @@ const OurHistory = lazy(
     )
 );
 
+
 const LazyComponent = ({ children }) => (
   <Suspense fallback={<LoadingScreen />}>{children}</Suspense>
 );
 
-const AppRoutes = ({ setMenuOpen }) => {
+const AppRoutes = () => {
   return (
-    <div onMouseOut={() => setMenuOpen(false)}>
+    <div>
       <Routes>
         <Route
           index
@@ -105,10 +107,11 @@ const AppRoutes = ({ setMenuOpen }) => {
                 <Services />
               </LazyComponent>
               <LazyComponent>
-                <Ezara />
+                <VideoWorks />
               </LazyComponent>
               <LazyComponent>
-                <VideoWorks />
+                {/* <Ezara /> ama brand kanin wlatakana  */}
+                <AboutColor />
               </LazyComponent>
               <LazyComponent>
                 <AwardsSection />

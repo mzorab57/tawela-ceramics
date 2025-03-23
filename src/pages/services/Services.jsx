@@ -54,8 +54,10 @@ const Services = () => {
           />
         </AnimatedComponent>
       </div>
+
+      
       <section
-        className="bg-neutral-800 bg-cover bg-center "
+        className="bg-neutral-800 py-10 bg-cover bg-center "
         style={{
           backgroundImage:
             'url("https://wowtheme7.com/tf/logistick/assets/images/shapes/features-bg.png")',

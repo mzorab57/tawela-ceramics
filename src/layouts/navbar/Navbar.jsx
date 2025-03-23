@@ -9,7 +9,7 @@ import AnimatedComponent from "../../component/animations/AnimatedComponent";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
-const Navbar = ({ setMenuOpen }) => {
+const Navbar = () => {
   const { t } = useTranslation(); // Destructure the translation function
   const [color, setColor] = useState(false);
   const [isOpenMenu, setOpenMenu] = useState(false);
@@ -80,7 +80,7 @@ const Navbar = ({ setMenuOpen }) => {
           <ul
             className={`hidden lg:flex justify-center items-center text-lg space-x-8 rtl:space-x-8 h-full font-jost `}
           >
-            <li onMouseMove={() => setMenuOpen(false)}>
+            <li >
               <Link
                 to="/"
                 onClick={() => scrollToSection("hero")}
@@ -90,7 +90,7 @@ const Navbar = ({ setMenuOpen }) => {
               </Link>
             </li>
 
-            <li onMouseMove={() => setMenuOpen(false)}>
+            <li >
               <Link
                 to="/about"
                 onClick={() => window.scrollTo(0, 0)}
@@ -102,7 +102,7 @@ const Navbar = ({ setMenuOpen }) => {
 
             {/* Pages Dropdown */}
             <li
-              onMouseMove={() => setMenuOpen(true)}
+              
               onClick={() => window.scrollTo(0, 0)}
               className="group relative "
             >
@@ -130,7 +130,7 @@ const Navbar = ({ setMenuOpen }) => {
             </li>
 
             {/* Contacts */}
-            <li onMouseMove={() => setMenuOpen(false)}>
+            <li >
               <Link
                 to="/"
                 onClick={() => scrollToSection("contacts")}

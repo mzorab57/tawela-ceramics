@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { HashRouter as Router } from "react-router-dom";
 import Navbar from "./layouts/navbar/Navbar";
 import Footer from "./layouts/footer/Footer";
@@ -8,7 +8,7 @@ import AppRoutes from "./routes/AppRoute";
 
 function App() {
   // aw set show service bo awaia katek mouse lasar page lachu la har shwenek bet colse aw hover bkat
-  const [menuOpen, setMenuOpen] = useState(false);
+
 
   // // Disable right-click context menu
   useEffect(() => {
@@ -64,8 +64,8 @@ function App() {
 
   return (
     <Router>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <AppRoutes setMenuOpen={setMenuOpen} />
+      <Navbar />
+      <AppRoutes  />
       <Footer />
     </Router>
   );

@@ -7,12 +7,14 @@ import Services from "../services/Services";
 import Partners from "../../component/parteners/Partners";
 
 import bg from "/assets/images/about/bgAbout.jpg";
+import AboutLocation from "../../component/aboutLocation/AboutLocation";
 
 const About = () => {
   return (
     <>
       <AboutTop img={bg} />
       <AboutUs />
+      <AboutLocation />
       <AboutColor />
       <Services />
       <Partners />

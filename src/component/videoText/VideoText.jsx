@@ -20,9 +20,9 @@ const VideoText = () => {
         {t('Projects')}
       </div>
       <aside className="w-[200px]  relative h-full lg:-translate-x-10">
-        <hr className="h-[500px] absolute ltr:left-1  -top-14 ltr:border-l rtl:border-r rtl:right-1 " />
+        <hr className="h-[500px] absolute ltr:left-1   ltr:border-l rtl:border-r rtl:right-1 " />
        
-        <ul className="lg:space-y-12 space-y-6 ">
+        <ul className="lg:space-y-20 space-y-6 ">
           {categoriesArray.map((category, index) => (
             <li key={index} className="text-lg text-gray-500 flex items-center -space-x-1 ">
               <span className="w-2 h-2 bg-[#1b6379] rounded-full z-[1]"></span>
