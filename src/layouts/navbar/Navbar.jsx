@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`Navbar ${textColorClass} flex justify-between lg:flex-col overflow-hidden`}
+      className={`Navbar ${textColorClass}  flex justify-between lg:flex-col overflow-hidden`}
     >
       {/* Main Navbar */}
       <div
@@ -78,7 +78,7 @@ const Navbar = () => {
           dataAosDelay="1000"
         >
           <ul
-            className={`hidden lg:flex justify-center items-center text-lg space-x-8 rtl:space-x-8 h-full font-jost `}
+            className={`hidden lg:flex justify-center items-center text-xl  space-x-8 rtl:space-x-8 h-full font-jost `}
           >
             <li >
               <Link
@@ -107,10 +107,10 @@ const Navbar = () => {
               className="group relative "
             >
               <span className="hover:text-yellow-500 cursor-pointer flex justify-center items-center   py-7 ">
-                Pages
-                <MdOutlineKeyboardArrowDown className="pt-1" size={25} />
+                Company Profile
+                {/* <MdOutlineKeyboardArrowDown className="pt-1" size={30} /> */}
               </span>
-              <ul className="absolute hidden group-hover:block w-32 text-nowrap  top-[5.09rem] border border-gray-500 border-t-0 bg-black/80 duration-700 transition-all transform ease-in-out text-white shadow-lg  p-2 space-y-2">
+              <ul className="absolute hidden group-hover:block w-56 text-nowra text-xl  top-[5.09rem] border border-gray-500 border-t-0 bg-black/80 duration-700 transition-all transform ease-in-out text-white shadow-lg  p-4 space-y-4">
                 <li>
                   <Link to="/portfolio" className="hover:text-yellow-500 duration-300 transition-all transform ease-in-out ">
                      Portfolio

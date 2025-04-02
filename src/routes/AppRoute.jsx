@@ -83,7 +83,6 @@ const OurHistory = lazy(
     )
 );
 
-
 const LazyComponent = ({ children }) => (
   <Suspense fallback={<LoadingScreen />}>{children}</Suspense>
 );

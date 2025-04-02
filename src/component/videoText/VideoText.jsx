@@ -1,37 +1,34 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const VideoText = () => {
   const { t } = useTranslation();
-  const projectCategories = t('projectCategories', { returnObjects: true });
+  const projectCategories = t("projectCategories", { returnObjects: true });
 
   // Ensure projectCategories is an array, or provide a fallback
-  const categoriesArray = [
-        "Ceramics",
-        "Porcelain",
-        "Granet",
-        "View all video"
-      ];
+  const categoriesArray = ["Ceramics", "Porcelain", "Granet", "View all video"];
 
   return (
-    <div className="video-text flex px-4 font-jost">
-      <div className="uppercase -rotate-90 hidden  lg:-translate-x-10 lg:block place-self-center text-gray-200 font-bold text-3xl md:text-4xl lg:text-7xl">
-        {t('Projects')}
-      </div>
-      <aside className="w-[200px]  relative h-full lg:-translate-x-10">
-        <hr className="h-[500px] absolute ltr:left-1   ltr:border-l rtl:border-r rtl:right-1 " />
-       
-        <ul className="lg:space-y-20 space-y-6 ">
+    <div className="font-jost">
+     
+
+      {/* Categories List */}
+      <div className="relative pl-4 translate-y-5 border-l border-gray-300">
+        <ul className="xl:space-y-24  space-y-10">
           {categoriesArray.map((category, index) => (
-            <li key={index} className="text-lg text-gray-500 flex items-center -space-x-1 ">
-              <span className="w-2 h-2 bg-[#1b6379] rounded-full z-[1]"></span>
-              <Link to={`/video`} className={`pb-0.5 pl-2 ${category === "View all video" && 'cursor-pointer'}`}>{category}</Link>
+            <li key={index} className="group">
+              <Link
+                to="/video"
+                className="flex items-center space-x-4 text-gray-600 hover:text-teal-600 transition-colors"
+              >
+                <span className="w-2.5 h-2.5 bg-teal-500 rounded-full group-hover:ring-4 ring-teal-500/20 transition-all duration-300" />
+                <span className="text-lg font-medium">{category}</span>
+              </Link>
             </li>
           ))}
         </ul>
-      
-      </aside>
+      </div>
     </div>
   );
 };

@@ -1,16 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import logo from "/logoTawela.png";
+import logo from "/logoTawela.png"; // Convert to WebP
 import { Link } from "react-router-dom";
 
+// Convert gallery images to WebP and optimize them
 const galleryImages = [
-  "/assets/images/gallery/g(1).JPG",
-  "/assets/images/gallery/g(2).JPG",
-  "/assets/images/gallery/g(3).JPG",
-  "/assets/images/gallery/g(14).JPG",
-  "/assets/images/gallery/g(5).JPG",
-  "/assets/images/gallery/g(6).JPG",
+  "/assets/images/gallery/g1.webp",
+  "/assets/images/gallery/g2.webp",
+  "/assets/images/gallery/g3.webp",
+  "/assets/images/gallery/g14.webp",
+  "/assets/images/gallery/g5.webp",
+  "/assets/images/gallery/g6.webp",
 ];
 
 const Footer = () => {
@@ -19,28 +19,39 @@ const Footer = () => {
   return (
     <footer
       name="contacts"
-      className=" text-slate-100 font-jost  lg:py-20 relative "
-      style={{ backgroundImage: "url(https://arkio-next.netlify.app/images/footer.jpg)" }}
+      className="min-h-[600px] text-slate-100 font-jost lg:py-20 relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+          url('/assets/images/footerBg/footer-bg.webp')`, // Convert to WebP
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="container mx-auto px-4 max-w-[1400px] overflow-hidden ">
-        {/* <img
-          src="https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/1.png"
-          alt="footer"
-          className="absolute right-0 lg:w-56 w-32 animate-custom-bounce bg-white rounded-l-full"
-        /> */}
-         {/* <img
-            src="https://archin-reactjs.vercel.app/home3_construction/assets/img/about_pat.png"
-            alt="Background Pattern"
-            className="absolute bottom-0 right-0 w-full  lg:w-1/3 opacity-50"
-          /> */}
-        <img
-          src="https://html.rrdevs.net/artima/assets/imgs/footer-2/left-shape.png"
-          alt="footer"
-          className="absolute bottom-0 left-0  lg:w-fit w-80 "
-        />
+      <div className="container mx-auto px-4 max-w-[1400px]">
+        {/* Left shape with WebP format and loading optimization */}
+        <picture>
+          <source
+            srcSet="/assets/images/footer/left-shape.webp"
+            type="image/webp"
+          />
+          <source
+            srcSet="/assets/images/footer/left-shape.png"
+            type="image/png"
+          />
+          <img
+            src="/assets/images/footer/left-shape.png"
+            alt="Decorative footer shape"
+            className="absolute bottom-0 left-0 w-80 lg:w-[400px] h-auto"
+            width={400}
+            height={600}
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+
         <div className="flex flex-col md:flex-row justify-between pt-10 items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* Logo Section */}
-          <div className="md:w-1/4">
+          <div className="md:w-1/4 min-h-[200px]">
             <div className="flex items-center space-x-2">
               <div className="flex flex-col space-y-5">
                 <span className="text-3xl font-jost font-medium ">
@@ -83,7 +94,12 @@ const Footer = () => {
                 <span className="font-jost font-medium text-lg pr-1">
                   Location:{" "}
                 </span>
-                <Link to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`} className="text-gray-400">FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate</Link >
+                <Link
+                  to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`}
+                  className="text-gray-400"
+                >
+                  FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate
+                </Link>
               </li>
               <li className="flex items-center mb-2 cursor-pointer ">
                 <i className="fas fa-envelope text-primary mr-2"></i>
@@ -114,19 +130,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Gallery Section */}
+          {/* Gallery Section with optimized images */}
           <div className="md:w-1/4 w-full">
             <h5 className="text-xl font-jost font-medium mb-4 border-b pb-2 border-b-gray-500">
               {t("gallery")}
             </h5>
             <div className="grid grid-cols-3 gap-2">
               {galleryImages.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt="Gallery Image"
-                  className="w-full  h-20 object-cover"
-                />
+                <picture key={index}>
+                  <source srcSet={image} type="image/webp" />
+                  <img
+                    src={image.replace(".webp", ".jpg")}
+                    alt={`Gallery image ${index + 1}`}
+                    className="w-full h-20 object-cover rounded-sm"
+                    width={120}
+                    height={80}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               ))}
             </div>
           </div>

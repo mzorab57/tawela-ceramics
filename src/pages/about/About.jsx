@@ -8,16 +8,22 @@ import Partners from "../../component/parteners/Partners";
 
 import bg from "/assets/images/about/bgAbout.jpg";
 import AboutLocation from "../../component/aboutLocation/AboutLocation";
+import WhyChooseUs from "../../component/whyChooseUs/WhyChooseUs";
+import Network from "../../component/network/Network";
+import Ezara from "../../component/ezara/Ezara";
+
 
 const About = () => {
   return (
     <>
       <AboutTop img={bg} />
       <AboutUs />
+      <WhyChooseUs />
       <AboutLocation />
       <AboutColor />
-      <Services />
-      <Partners />
+      <Network />
+      {/* <Services /> */}
+      {/* <Partners /> */}
     </>
   );
 };

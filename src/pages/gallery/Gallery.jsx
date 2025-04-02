@@ -14,46 +14,118 @@ import Video from "yet-another-react-lightbox/plugins/video";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-// gallery
-// import h2l1 from  "/assets/images/gallery/g(1).JPG";
-// import h2l2 from  "/assets/images/gallery/g(2).JPG";
-// import h2l3 from  "/assets/images/gallery/g(3).JPG";
-// import h2l4 from  "/assets/images/gallery/g(4).JPG";
-// import h2l5 from  "/assets/images/gallery/g(5).JPG";
-// import h2l6 from  "/assets/images/gallery/g(6).JPG";
-// import h2l7 from  "/assets/images/gallery/g(7).JPG";
-// import h2l8 from  "/assets/images/gallery/g(8).JPG";
-// import h2l9 from  "/assets/images/gallery/g(9).JPG";
-// import h2l10 from "/assets/images/gallery/g(10).JPG";
-// import h2l11 from "/assets/images/gallery/g(11).JPG";
-// import h2l12 from "/assets/images/gallery/g(12).JPG";
-// import h2l13 from "/assets/images/gallery/g(13).JPG";
-// import h2l14 from "/assets/images/gallery/g(14).JPG";
-// import h2l15 from "/assets/images/gallery/g(15).JPG";
-// import h2l16 from "/assets/images/gallery/g(16).JPG";
-
 import bg from "/assets/images/gallery/bgre.webp";
 
 import { useTranslation } from "react-i18next";
 
 function Gallery() {
-  let images = [
-    { src: "/assets/images/gallery/g(1).JPG"},
-    { src: "/assets/images/gallery/g(2).JPG"},
-    { src: "/assets/images/gallery/g(3).JPG"},
-    { src: "/assets/images/gallery/g(4).JPG"},
-    { src: "/assets/images/gallery/g(5).JPG"},
-    { src: "/assets/images/gallery/g(6).JPG"},
-    { src: "/assets/images/gallery/g(7).JPG"},
-    { src: "/assets/images/gallery/g(8).JPG"},
-    { src: "/assets/images/gallery/g(9).JPG"},
-    { src: "/assets/images/gallery/g(10).JPG" },
-    { src: "/assets/images/gallery/g(11).JPG" },
-    { src: "/assets/images/gallery/g(12).JPG" },
-    { src: "/assets/images/gallery/g(13).JPG" },
-    { src: "/assets/images/gallery/g(14).JPG" },
-    { src: "/assets/images/gallery/g(15).JPG" },
-    // { src: "/assets/images/gallery/g(16).JPG" },
+  // Updated images array with WebP format and fallbacks
+  const images = [
+    {
+      src: "/assets/images/gallery/g(1).webp",
+      fallback: "/assets/images/gallery/g(1).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 1",
+    },
+    {
+      src: "/assets/images/gallery/g(2).webp",
+      fallback: "/assets/images/gallery/g(2).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 2",
+    },
+    {
+      src: "/assets/images/gallery/g(3).webp",
+      fallback: "/assets/images/gallery/g(3).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 3",
+    },
+    {
+      src: "/assets/images/gallery/g(4).webp",
+      fallback: "/assets/images/gallery/g(4).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 4",
+    },
+    {
+      src: "/assets/images/gallery/g(5).webp",
+      fallback: "/assets/images/gallery/g(5).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 5",
+    },
+    {
+      src: "/assets/images/gallery/g(6).webp",
+      fallback: "/assets/images/gallery/g(6).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 6",
+    },
+    {
+      src: "/assets/images/gallery/g(7).webp",
+      fallback: "/assets/images/gallery/g(7).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 7",
+    },
+    {
+      src: "/assets/images/gallery/g(8).webp",
+      fallback: "/assets/images/gallery/g(8).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 8",
+    },
+    {
+      src: "/assets/images/gallery/g(9).webp",
+      fallback: "/assets/images/gallery/g(9).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 9",
+    },
+    {
+      src: "/assets/images/gallery/g(10).webp",
+      fallback: "/assets/images/gallery/g(10).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 10",
+    },
+    {
+      src: "/assets/images/gallery/g(11).webp",
+      fallback: "/assets/images/gallery/g(11).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 11",
+    },
+    {
+      src: "/assets/images/gallery/g(12).webp",
+      fallback: "/assets/images/gallery/g(12).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 12",
+    },
+    {
+      src: "/assets/images/gallery/g(13).webp",
+      fallback: "/assets/images/gallery/g(13).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 13",
+    },
+    {
+      src: "/assets/images/gallery/g(14).webp",
+      fallback: "/assets/images/gallery/g(14).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 14",
+    },
+    {
+      src: "/assets/images/gallery/g(15).webp",
+      fallback: "/assets/images/gallery/g(15).JPG",
+      width: 1920,
+      height: 1080,
+      alt: "Gallery image 15",
+    },
   ];
 
   const settings = {
@@ -124,9 +196,9 @@ function Gallery() {
       >
         <h1 className="text-4xl  whitespace-nowrap text-center  leading-relaxed font-semibold relative  uppercase text-gray-800 my-10 lg:my-0 ml-6 ">
           Gallery
-        <h5 className="lg:text-7xl text-6xl whitespace-nowrap  -translate-y-10   leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
-        Gallery
-        </h5>
+          <h5 className="lg:text-7xl text-6xl whitespace-nowrap  -translate-y-10   leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
+            Gallery
+          </h5>
         </h1>
 
         <div className="relative z-20">
@@ -137,16 +209,23 @@ function Gallery() {
                   className="group relative flex justify-center items-center"
                   onClick={() => setIsOpen(true, i)}
                 >
-                  {/* Image */}
-                  <img
-                    src={item.src}
-                    alt={`Image ${i}`}
-                    className="object-cover w-full h-[30rem] lg:h-[650px] cursor-pointer"
-                  />
+                  {/* Optimized Image with Picture Element */}
+                  <picture>
+                    <source srcSet={item.src} type="image/webp" />
+                    <img
+                      src={item.fallback}
+                      alt={item.alt}
+                      width={item.width}
+                      height={item.height}
+                      loading={i < 3 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="object-cover w-full h-[30rem] lg:h-[650px] cursor-pointer"
+                    />
+                  </picture>
+
                   {/* Hover Overlay with Icon */}
                   <div className="absolute inset-0 bg-teal-400/50 border-8  border-white text-center flex justify-center items-center cursor-pointer opacity-0 group-hover:opacity-60 transition-opacity duration-300">
                     <MdZoomOutMap className="text-orange-500 bg-white scale-100 hover:scale-125  duration-500 transition-all transform text-4xl " />{" "}
-                    {/* Replace "heloo" with this */}
                   </div>
                 </div>
               </div>
@@ -168,9 +247,18 @@ function Gallery() {
         />
       </div>
 
-      {/* Optional Overlay */}
+      {/* Background Image Optimization */}
       <div className="absolute inset-0 lg:opacity-40 opacity-100">
-        <img src={bg} alt="jhgj" />
+        <picture>
+          <source srcSet="/assets/images/gallery/bgre.webp" type="image/webp" />
+          <img
+            src="/assets/images/gallery/bgre.jpg"
+            alt="Gallery background"
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
+        </picture>
       </div>
     </section>
   );

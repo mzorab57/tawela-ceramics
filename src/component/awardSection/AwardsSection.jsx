@@ -1,6 +1,4 @@
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import AnimatedComponent from "../animations/AnimatedComponent";
 
 const AwardsSection = () => {
@@ -9,28 +7,28 @@ const AwardsSection = () => {
       id: 1,
       title: "Size: 120*240",
       description:
-        "This award recognizes an employee who has come up with a new idea or process that has positively impacted the company.",
+        "Crafted with precision, this slab offers durability and elegance, making it ideal for modern interiors.",
       link: "https://marblex.peacefulqode.co.in/our-services/",
     },
     {
       id: 2,
       title: "Size: 120*260",
       description:
-        "This award recognizes an employee who has shown exceptional leadership skills and has inspired and motivated others.",
+        "Designed for versatility, this slab enhances both residential and commercial spaces with its refined aesthetics.",
       link: "https://marblex.peacefulqode.co.in/carpets-rugs/",
     },
     {
       id: 3,
       title: "Size: 120*300",
       description:
-        "These are often awarded to businesses or individuals who have achieved success or made significant contributions in their industry.",
+        "A perfect choice for those seeking a balance of strength and style, suitable for a variety of applications.",
       link: "https://marblex.peacefulqode.co.in/about-us/",
     },
     {
       id: 4,
       title: "Size: 160*320",
       description:
-        "Design well Acetech showcases the latest trends, products, and technologies in the industry and provides a platform.",
+        "Featuring the latest in design and technology, this slab is a statement piece for any contemporary setting. ",
       link: "https://marblex.peacefulqode.co.in/carpets-rugs/",
     },
   ];

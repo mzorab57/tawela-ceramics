@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 import VideoText from "../videoText/VideoText";
 import VideoCard from "../videoCard/VideoCard";
 import AnimatedComponent from "../animations/AnimatedComponent";
-
-// Import videos
 import services_vide from "/assets/videos/tv1.mp4";
 import services_vide2 from "/assets/videos/tv2.mp4";
 import services_vide3 from "/assets/videos/tv3.MP4?url";
@@ -12,88 +10,59 @@ import services_vide3 from "/assets/videos/tv3.MP4?url";
 const VideoWorks = () => {
   const { t } = useTranslation();
 
-  // Video data array for better organization
-  const videos = [
-    {
-      id: "01",
-      title: "Ceramics",
-      description: "Beautify your home",
-      videoSrc: services_vide,
-      poster: "/assets/images/gallery/g(4).JPG",
-    },
-    {
-      id: "02",
-      title: "Porcelain",
-      description: "Beautify your home",
-      videoSrc: services_vide2,
-      poster: "/assets/images/gallery/g(15).JPG",
-    },
-    {
-      id: "03",
-      title: "Granite",
-      description: "Beautify your home",
-      videoSrc: services_vide3,
-      poster: "/assets/images/gallery/g(16).JPG",
-    },
-  ];
-
   return (
-    <section className="relative min-h-screen bg-gray-50 py-20 lg:py-28">
-      {/* Background Pattern */}
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          backgroundImage:
-            "url(https://arkio-next.netlify.app/images/testimonial/bg.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-  {/* Header Section */}
-  <header className="relative max-w-[1650px] px-5 mb-5  mx-auto uppercase">
+    <section className="relative bg-gray-50 py-16 sm:py-20 lg:py-28 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="relative mb-12 sm:mb-16 lg:mb-20 ">
           <AnimatedComponent animationType="fade-right">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl  font-jost font-medium text-gray-800">
+           
+            <h1 className="text-5xl  leading-relaxed font-jost font-medium relative uppercase text-gray-800 ">
+            {t("Our Video Projects")}
+              <h5 className="lg:text-6xl text-6xl   absolute lg:-top-4 -top-10   -translate-x-7  leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
               {t("Our Video Projects")}
-            </h2>
+              </h5>
+            </h1>
           </AnimatedComponent>
-        </header>
-<div className="size-full bg-slate-100">
-<div className="container mx-auto px-4 w-full   max-w-[1650px]">
-      
+        </div>
 
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 xl:gap-0">
-          {/* Left Column - Text Content */}
-          <div className="lg:w-1/3">
+        <div className="grid lg:grid-cols-12  gap-8 lg:gap-12">
+          {/* Sidebar */}
+          <div className="lg:col-span-3 ">
             <AnimatedComponent animationType="fade-right">
               <VideoText />
             </AnimatedComponent>
           </div>
 
-          {/* Right Column - Video Grid */}
-          <div className="lg:w-2/3 lg:-translate-y-8">
-            <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-8 lg:gap-14">
-              {videos.map((video) => (
-                <AnimatedComponent
-                  key={video.id}
-                  animationType="fade-up"
-                  className="h-full"
-                >
-                  <VideoCard
-                    number={video.id}
-                    title={t(video.title)}
-                    description={t(video.description)}
-                    videoSrc={video.videoSrc}
-                    poster={video.poster}
-                  />
-                </AnimatedComponent>
-              ))}
+          {/* Video Grid */}
+          <div className="lg:col-span-9 ">
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+              <VideoCard
+                number="01"
+                title={t("Ceramics")}
+                description={t("walls and floors")}
+                videoSrc={services_vide}
+                poster="/assets/images/gallery/g(4).JPG"
+              />
+              <VideoCard
+                number="02"
+                title={t("Porcelain")}
+                description={t("any environment.")}
+                videoSrc={services_vide2}
+                poster="/assets/images/gallery/g(15).JPG"
+              />
+              <VideoCard
+                number="03"
+                title={t("Granite")}
+                description={t("indoor and outdoor")}
+                videoSrc={services_vide3}
+                poster="/assets/images/gallery/g(16).JPG"
+              />
             </div>
           </div>
         </div>
       </div>
-</div>
-      
     </section>
   );
 };
