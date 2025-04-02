@@ -76,11 +76,8 @@ const AboutColor = () => {
               <span className="text-yellow-600  text-sm uppercase tracking-wider">
                 --- choose your stone
               </span>
-              <h2 className="text-5xl  ">
-                Showroom with Selection
-              </h2>
+              <h2 className="text-5xl  ">Showroom with Selection</h2>
             </div>
-         
           </div>
 
           {/* Product Carousel */}
@@ -104,8 +101,8 @@ const AboutColor = () => {
             }}
             className="pt-10 pb-16"
           >
-            {products.map((product) => (
-              <SwiperSlide key={product.id}>
+            {products.map((product, index) => (
+              <SwiperSlide key={`slide-${index}`}>
                 <div className=" cursor-pointer transform transition-all duration-300 hover:scale-105">
                   <div
                     className=" p-6 rounded-xl shadow-sm 

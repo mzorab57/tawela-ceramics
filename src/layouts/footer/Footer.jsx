@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 // Convert gallery images to WebP and optimize them
 const galleryImages = [
-  "/assets/images/gallery/g1.webp",
-  "/assets/images/gallery/g2.webp",
-  "/assets/images/gallery/g3.webp",
-  "/assets/images/gallery/g14.webp",
-  "/assets/images/gallery/g5.webp",
-  "/assets/images/gallery/g6.webp",
+  "/assets/images/gallery/g(1).webp",
+  "/assets/images/gallery/g(2).webp",
+  "/assets/images/gallery/g(3).webp",
+  "/assets/images/gallery/g(5).webp",
+  "/assets/images/gallery/g(6).webp",
+  "/assets/images/gallery/g(14).webp",
 ];
 
 const Footer = () => {
@@ -29,25 +29,17 @@ const Footer = () => {
     >
       <div className="container mx-auto px-4 max-w-[1400px]">
         {/* Left shape with WebP format and loading optimization */}
-        <picture>
-          <source
-            srcSet="/assets/images/footer/left-shape.webp"
-            type="image/webp"
-          />
-          <source
-            srcSet="/assets/images/footer/left-shape.png"
-            type="image/png"
-          />
+      
           <img
-            src="/assets/images/footer/left-shape.png"
+            src="https://html.rrdevs.net/artima/assets/imgs/footer-2/left-shape.png"
             alt="Decorative footer shape"
-            className="absolute bottom-0 left-0 w-80 lg:w-[400px] h-auto"
+            className="absolute bottom-0 left-0 w-80 lg:w-[700px] h-auto"
             width={400}
             height={600}
             loading="lazy"
             decoding="async"
           />
-        </picture>
+       
 
         <div className="flex flex-col md:flex-row justify-between pt-10 items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* Logo Section */}

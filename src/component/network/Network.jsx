@@ -27,10 +27,10 @@ const Network = () => {
   ];
 
 return (
-    <section className="py-24 text-gray-700">
-        <div className="container mx-auto px-4">
+    <section className="py-48 text-gray-700 ">
+        <div className="container   m-auto px-4">
             <AnimatedComponent animationType="fade-down">
-            <h5 className="text-5xl  leading-relaxed font-medium  uppercase text-gray-800 -translate-y-5 ">
+            <h5 className="text-5xl  leading-relaxed lg:translate-x-6  font-medium  uppercase text-gray-800 -translate-y-5 ">
               Our Network
             </h5>
             <h5 className="lg:text-7xl text-5xl absolute  -top-14   leading-relaxed font-medium  uppercase text-gray-400 opacity-15  ">
@@ -38,7 +38,7 @@ return (
             </h5>
             </AnimatedComponent>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 translate-y-16">
                 {countries.map((country) => (
                     <AnimatedComponent
                         key={country}

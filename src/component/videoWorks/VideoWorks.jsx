@@ -16,13 +16,14 @@ const VideoWorks = () => {
         {/* Header */}
         <div className="relative mb-12 sm:mb-16 lg:mb-20 ">
           <AnimatedComponent animationType="fade-right">
-           
-            <h1 className="text-5xl  leading-relaxed font-jost font-medium relative uppercase text-gray-800 ">
-            {t("Our Video Projects")}
-              <h5 className="lg:text-6xl text-6xl   absolute lg:-top-4 -top-10   -translate-x-7  leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
-              {t("Our Video Projects")}
-              </h5>
-            </h1>
+            <div className="relative">
+              <h1 className="text-5xl leading-relaxed font-jost font-medium uppercase text-gray-800">
+                {t("Our Video Projects")}
+              </h1>
+              <div className="lg:text-6xl text-6xl absolute lg:-top-4 -top-10 -translate-x-7 leading-relaxed font-bold uppercase text-gray-500 opacity-10">
+                {t("Our Video Projects")}
+              </div>
+            </div>
           </AnimatedComponent>
         </div>
 

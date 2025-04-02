@@ -11,22 +11,19 @@ const Services = () => {
       id: 1,
       icon: foolr,
       title: "CERAMIC",
-      description:
-        "Example View ",
+      description: "Example View ",
     },
     {
       id: 2,
       icon: trowel,
       title: "PORCELAIN",
-      description:
-        "Example View ",
+      description: "Example View ",
     },
     {
       id: 3,
       icon: tile,
       title: "GRANITE",
-      description:
-        "Example View ",
+      description: "Example View ",
     },
   ];
 
@@ -41,28 +38,39 @@ const Services = () => {
                 Products
               </h5>
             </h1>
-            <p className=" lg:mb-16 lg:text-xl lg:max-w-xl  text-slate-600">
-              At  <span className="font-medium font-jost text-gray-600 text-xl">Tawela Ceramic </span> , we offer a premium selection of ceramic,
-              granite, and porcelain products, designed to elevate any space
-              with elegance and durability.
+            <div className=" lg:mb-16 lg:text-xl lg:max-w-xl  text-slate-600">
+              At{" "}
+              <span className="font-medium font-jost text-gray-600 text-xl">
+                Tawela Ceramic{" "}
+              </span>{" "}
+              , we offer a premium selection of ceramic, granite, and porcelain
+              products, designed to elevate any space with elegance and
+              durability.
               <p className=" py-5">
-                <span className="font-medium font-jost text-gray-600 text-2xl">Ceramic: </span>{" "}
+                <span className="font-medium font-jost text-gray-600 text-2xl">
+                  Ceramic:{" "}
+                </span>{" "}
                 Versatile and stylish, our ceramic products combine beauty with
                 practicality, making them ideal for walls, floors, and
                 decorative applications.
               </p>
               <p className=" pb-5">
-                <span className="font-medium font-jost text-gray-600 text-2xl">Granite: </span> Known
-                for its natural strength and stunning textures, our granite
-                collection adds timeless sophistication to any environment.
+                <span className="font-medium font-jost text-gray-600 text-2xl">
+                  Granite:{" "}
+                </span>{" "}
+                Known for its natural strength and stunning textures, our
+                granite collection adds timeless sophistication to any
+                environment.
               </p>
               <p>
-                <span className="font-medium font-jost text-gray-600 text-2xl">Porcelain: </span>{" "}
+                <span className="font-medium font-jost text-gray-600 text-2xl">
+                  Porcelain:{" "}
+                </span>{" "}
                 With superior durability and water resistance, our porcelain
                 products are perfect for both indoor and outdoor use, offering a
                 sleek and modern aesthetic.
               </p>
-            </p>
+            </div>
           </div>
         </AnimatedComponent>
         <AnimatedComponent animationType="fade-left" dataAosDuration="500">
@@ -108,8 +116,13 @@ const Services = () => {
                 <h5 className="mb-4 text-2xl  font-medium group-hover:text-gray-700 text-white">
                   {feature.title}
                 </h5>
-                <Link onClick={() => window.scrollTo(0, 0)} to={`${'/portfolio'}`} className="text-orange-400/70 translate-y-10 flex justify-center items-center font-medium ">
-                  {feature.description} <svg
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to={`${"/portfolio"}`}
+                  className="text-orange-400/70 translate-y-10 flex justify-center items-center font-medium "
+                >
+                  {feature.description}{" "}
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"

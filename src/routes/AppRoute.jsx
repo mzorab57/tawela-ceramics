@@ -118,9 +118,9 @@ const AppRoutes = () => {
               <LazyComponent>
                 <Gallery />
               </LazyComponent>
-              <LazyComponent>
+              {/* <LazyComponent>
                 <Partners />
-              </LazyComponent>
+              </LazyComponent> */}
             </>
           }
         />
