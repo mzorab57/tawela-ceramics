@@ -7,41 +7,44 @@ const Network = () => {
 
   const countries = [
     "mayorca",
-     "miran",
+     "MiranCity",
      "pak",
      "sharisharan",
      "rovar",
-     "shad",
+     "ShariShad",
      "shacity",
      "titanictowers",
      "suli",
      "mayorca",
-     "miran",
+     "MiranCity",
      "pak",
      "sharisharan",
-     "rovar",
-     "shad",
+    //  "rovar",
+     "ShariShad",
      "shacity",
      "titanictowers",
      "suli",
+     "Qaiwan"
   ];
 
 return (
     <section className="py-48 text-gray-700 ">
         <div className="container   m-auto px-4">
             <AnimatedComponent animationType="fade-down">
-            <h5 className="text-5xl  leading-relaxed lg:translate-x-6  font-medium  uppercase text-gray-800 -translate-y-5 ">
-              Our Network
-            </h5>
-            <h5 className="lg:text-7xl text-5xl absolute  -top-14   leading-relaxed font-medium  uppercase text-gray-400 opacity-15  ">
-              Our Network
-            </h5>
+            <div className="relative">
+              <h2 className="text-5xl leading-relaxed lg:translate-x-6 font-medium uppercase text-gray-800 -translate-y-5">
+                Our Network
+              </h2>
+              <h2 className="lg:text-7xl text-5xl absolute -top-14 leading-relaxed font-medium uppercase text-gray-400 opacity-15">
+                Our Network
+              </h2>
+            </div>
             </AnimatedComponent>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 translate-y-16">
-                {countries.map((country) => (
+                {countries.map((country,i) => (
                     <AnimatedComponent
-                        key={country}
+                        key={i}
                         animationType="fade-up"
                         className="group"
                     >

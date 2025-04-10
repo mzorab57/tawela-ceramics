@@ -5,12 +5,12 @@ const AboutLocation = () => {
   const locations = [
     {
       city: "Mosul",
-      text: "Mosul Branch  / Al-Muthana",
+      text: "Mosul Branch  / Zuhour-Al-Muthana",
       coordinates: { top: "15%", left: "45%" },
     },
     {
       city: "Erbil",
-      text: "Erbil Branch / 100m Street",
+      text: "Erbil Branch",
       coordinates: { top: "20%", left: "58%" },
     },
     {
@@ -20,7 +20,7 @@ const AboutLocation = () => {
     },
     {
       city: "Kirkuk",
-      text: "Kirkuk Branch / Shorija",
+      text: "Kirkuk Branch / Dadgay nwe",
       coordinates: { top: "38%", left: "50%" },
     },
     {

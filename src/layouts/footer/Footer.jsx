@@ -1,16 +1,41 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import logo from "/logoTawela.png"; // Convert to WebP
-import { Link } from "react-router-dom";
+import logo from "/logoTawela.png";
 
-// Convert gallery images to WebP and optimize them
-const galleryImages = [
-  "/assets/images/gallery/g(1).webp",
-  "/assets/images/gallery/g(2).webp",
-  "/assets/images/gallery/g(3).webp",
-  "/assets/images/gallery/g(5).webp",
-  "/assets/images/gallery/g(6).webp",
-  "/assets/images/gallery/g(14).webp",
+
+const locations = [
+  {
+    city: "Kirkuk",
+    cityKurdish: "کەرکوک",
+    address: "New Court Street, near Fourth Bridge, opposite Kirkuk Jawhary",
+    addressKurdish: "شەقامی دادگای نوێ، نزیک پردی چوارەم، بەرامبەر جەوهەری کەرکوک",
+    phones: ["07706631010", "07516631010"],
+    mapLink: "https://maps.google.com/?q=35.421844,44.381432"
+  },
+  {
+    city: "Mosul",
+    cityKurdish: "موسڵ",
+    address: "Al-Zuhour Street - before Al-Muthanna Bridge - opposite the archaeological hill",
+    addressKurdish: "شەقامی الزهور - پێش پردی المثنى - بەرامبەر التل الأثرى",
+    phones: ["0770 140 0877", "0750 140 0877"],
+    mapLink: "https://maps.google.com/?q=36.360767,43.172226"
+  },
+  {
+    city: "Sulaymaniyah",
+    cityKurdish: "سلێمانی",
+    addresses: [
+      {
+        main: "Before Sulaymaniyah-Arbat checkpoint",
+        mainKurdish: "ناونیشانی سەرەکی: سلێمانی پێش خاڵی پشکنینی سلێمانی عەربەت"
+      },
+      {
+        secondary: "Malik Mahmood Street, near Kobani Bridge",
+        secondaryKurdish: "ناونیشانی دووەم: سلێمانی شەقامی مەلیک مەحموود نزیک پردی کۆبانی"
+      }
+    ],
+    phones: ["07701535934", "07501132720"],
+    mapLink: "https://maps.app.goo.gl/q8bb7uuiiToyCF1x8"
+  }
 ];
 
 const Footer = () => {
@@ -19,135 +44,102 @@ const Footer = () => {
   return (
     <footer
       name="contacts"
-      className="min-h-[600px] text-slate-100 font-jost lg:py-20 relative"
+      className="min-h-[600px] text-slate-100 opacity-90 font-jost lg:py-20  relative"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-          url('/assets/images/footerBg/footer-bg.webp')`, // Convert to WebP
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+          url('https://magenta-lemur-647050.hostingersite.com/assets/images/footerBg/footer-bg.webp')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
       }}
     >
       <div className="container mx-auto px-4 max-w-[1400px]">
-        {/* Left shape with WebP format and loading optimization */}
-      
-          <img
-            src="https://html.rrdevs.net/artima/assets/imgs/footer-2/left-shape.png"
-            alt="Decorative footer shape"
-            className="absolute bottom-0 left-0 w-80 lg:w-[700px] h-auto"
-            width={400}
-            height={600}
-            loading="lazy"
-            decoding="async"
-          />
-       
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-10">
+          {/* Company Info Section */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-4">
+              <img src={logo} alt="Tawela Ceramics" className="w-24 h-24" />
+              <h3 className="text-2xl font-bold">Tawela Ceramics</h3>
+            </div>
+            <p className="text-gray-300">
+            Tawela Ceramic Company is one of the largest ceramic distribution companies in Iraq.
+            </p>
+            <div className="flex items-center space-x-2 text-gray-300">
+              <i className="fas fa-envelope text-teal-500"></i>
+              Email: 
+              <a 
+                href="mailto:info@tawelaceramic.com"
+                className="hover:text-teal-500 transition-colors"
+              >
+                info@tawelaceramic.com
+              </a>
+            </div>
+          </div>
 
-        <div className="flex flex-col md:flex-row justify-between pt-10 items-start space-y-8 md:space-y-0 md:space-x-8">
-          {/* Logo Section */}
-          <div className="md:w-1/4 min-h-[200px]">
-            <div className="flex items-center space-x-2">
-              <div className="flex flex-col space-y-5">
-                <span className="text-3xl font-jost font-medium ">
-                  Tawela Ceramics
-                </span>
-                <img src={logo} alt="logo" className="size-40" />
-              </div>
+          {/* Locations Grid */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xl font-bold mb-6 border-b border-gray-600 pb-2">
+            Our locations 
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {locations.map((location, index) => (
+                <div key={index} className="space-y-3">
+                  <h5 className="text-lg font-semibold px-2 rounded bg-gray-500/30 text-gray-300">
+                    {location.city} / {location.cityKurdish}
+                  </h5>
+                  <div className="text-sm text-gray-300">
+                    {location.addresses ? (
+                      <>
+                        <p className="mb-2">{location.addresses[0].mainKurdish}</p>
+                        <p className="mb-2">{location.addresses[1].secondaryKurdish}</p>
+                      </>
+                    ) : (
+                      <p className="mb-2">{location.addressKurdish}</p>
+                    )}
+                    {location.phones.map((phone, idx) => (
+                      <a
+                        key={idx}
+                        href={`tel:${phone}`}
+                        className="block hover:text-teal-500 transition-colors"
+                      >
+                        {phone}
+                      </a>
+                    ))}
+                    <a
+                      href={location.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-block text-teal-500 hover:underline"
+                    >
+                      View On Map
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Working Hours Section */}
-          <div className="md:w-1/4">
-            <h5 className="text-xl font-jost font-medium mb-4 border-b  pb pb-2 border-b-gray-500">
+          <div>
+            <h4 className="text-xl font-bold mb-6 border-b border-gray-600 pb-2">
               {t("working_hours")}
-            </h5>
-            <ul>
-              <li className="mb-2">
-                <span className="block font-jost text-lg font-medium">
-                  {t("sunday_thursday")}
-                </span>
-                <span className="text-gray-400">8:00 am - 5:00 pm</span>
+            </h4>
+            <ul className="space-y-4">
+              <li>
+                <span className="block font-medium">{t("sunday_thursday")}</span>
+                <span className="text-gray-300">8:00 am - 5:00 pm</span>
               </li>
-              <li className="mb-2">
-                <span className="block font-jost text-lg font-medium">
-                  Only Friday
-                </span>
-                <span className="text-gray-400">Close</span>
+              <li>
+                <span className="block font-medium">{t("friday")}</span>
+                <span className="text-gray-300">{t("closed")}</span>
               </li>
             </ul>
-          </div>
-
-          {/* Contact Us Section */}
-          <div className="md:w-1/4 ">
-            <h5 className="text-xl font-jost font-medium mb-4 border-b pb-2 border-b-gray-500">
-              {t("contact_us")}
-            </h5>
-            <ul>
-              <li className="flex items-center mb-2 cursor-pointer">
-                <i className="fas fa-map-marker-alt text-primary mr-2 "></i>
-                <span className="font-jost font-medium text-lg pr-1">
-                  Location:{" "}
-                </span>
-                <Link
-                  to={`https://maps.app.goo.gl/q8bb7uuiiToyCF1x8`}
-                  className="text-gray-400"
-                >
-                  FFCJ+WRX, Sulaymaniyah, Sulaymaniyah Governorate
-                </Link>
-              </li>
-              <li className="flex items-center mb-2 cursor-pointer ">
-                <i className="fas fa-envelope text-primary mr-2"></i>
-                <span className="font-jost text-lg font-medium pr-1">
-                  Email:
-                </span>
-                <Link
-                  to={`mailto:${"info@tawelaceramic.com"}`}
-                  className="text-gray-400"
-                >
-                  info@tawelaceramic.com
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <i className="fas fa-phone text-primary mr-2"></i>
-                <span className="font-jost text-lg font-medium pr-1">
-                  Phone:
-                </span>
-                <a
-                  href="https://wa.me/9467701411893"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:underline"
-                >
-                  +9467701411893
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Gallery Section with optimized images */}
-          <div className="md:w-1/4 w-full">
-            <h5 className="text-xl font-jost font-medium mb-4 border-b pb-2 border-b-gray-500">
-              {t("gallery")}
-            </h5>
-            <div className="grid grid-cols-3 gap-2">
-              {galleryImages.map((image, index) => (
-                <picture key={index}>
-                  <source srcSet={image} type="image/webp" />
-                  <img
-                    src={image.replace(".webp", ".jpg")}
-                    alt={`Gallery image ${index + 1}`}
-                    className="w-full h-20 object-cover rounded-sm"
-                    width={120}
-                    height={80}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              ))}
-            </div>
           </div>
         </div>
 
-        <div className=" border-t-gray-300 mt-10 pt-4 text-center text-gray-400">
-          &copy; 2024 {t("company_name")}. {t("all_rights_reserved")}.
+        {/* Footer Bottom */}
+        <div className="mt-12 pt-6 border-t border-gray-700 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} {t("company_name")}. {t("all_rights_reserved")}.</p>
         </div>
       </div>
     </footer>

@@ -48,12 +48,14 @@ const WhyChooseUs = () => {
     <section className="py-32 bg-gray-50 font-jost">
       <div className="container mx-auto px-4">
         <AnimatedComponent animationType="fade-down">
-        <h1 className="text-5xl pb-20 leading-relaxed font-jost font-medium relative uppercase text-gray-800 ">
+          <div className="relative">
+            <h2 className="text-5xl pb-20 leading-relaxed font-jost font-medium uppercase text-gray-800">
               Why Choose Us
-              <h5 className="lg:text-7xl text-6xl   absolute lg:-top-4 -top-10   -translate-x-0  leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
-                Why Choose Us
-              </h5>
-            </h1>
+            </h2>
+            <h2 className="lg:text-7xl text-6xl absolute lg:-top-4 -top-10 -translate-x-0 leading-relaxed font-bold uppercase text-gray-500 opacity-10">
+              Why Choose Us
+            </h2>
+          </div>
         </AnimatedComponent>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
