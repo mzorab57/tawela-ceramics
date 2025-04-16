@@ -8,39 +8,33 @@ const WhyChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "Versatile Sizes",
-      description:
-        "Our tiles come in a wide array of sizes to meet diverse project requirements. Whether you're designing a cozy bathroom, a spacious living room, or a sprawling commercial space, we have the perfect size for you.",
+      title: t("Versatile Sizes"),
+      description: t("Versatile Sizes_desc"),
     },
     {
       id: 2,
-      title: "Faster Manufacturing",
-      description:
-        "Efficiency is at the core of our production process. With advanced technology and streamlined operations, we ensure quick turnaround times without compromising quality.",
+      title: t("Faster Manufacturing"),
+      description: t("Faster Manufacturing_desc"),
     },
     {
       id: 3,
-      title: "Perfect Service",
-      description:
-        "We prioritize your satisfaction with exceptional customer service and support. From helping you choose the right tiles to ensuring timely delivery, our team is dedicated to making your experience seamless.",
+      title: t("Perfect Service"),
+      description: t("Perfect Service_desc"),
     },
     {
       id: 4,
-      title: "Competitive Prices",
-      description:
-        "High-quality doesn't have to mean high costs. We combine premium materials with cost-effective production methods to offer tiles that are as affordable as they are luxurious.",
+      title: t("Competitive Prices"),
+      description: t("Competitive Prices_desc"),
     },
     {
       id: 5,
-      title: "Safe & Durable",
-      description:
-        "Our tiles are engineered for longevity. Non-porous, resistant to stains, and capable of withstanding heavy wear and tear, they are perfect for residential and commercial spaces.",
+      title: t("Safe & Durable"),
+      description: t("Safe & Durable_desc"),
     },
     {
       id: 6,
-      title: "Eco-Friendly",
-      description:
-        "Sustainability is a cornerstone of our manufacturing process. We use eco-friendly raw materials and adopt energy-efficient practices to minimize our environmental footprint.",
+      title: t("Eco-Friendly"),
+      description: t("Eco-Friendly_desc"),
     },
   ];
 
@@ -50,10 +44,10 @@ const WhyChooseUs = () => {
         <AnimatedComponent animationType="fade-down">
           <div className="relative">
             <h2 className="text-5xl pb-20 leading-relaxed font-jost font-medium uppercase text-gray-800">
-              Why Choose Us
+              {t("why_choose_us")}
             </h2>
             <h2 className="lg:text-7xl text-6xl absolute lg:-top-4 -top-10 -translate-x-0 leading-relaxed font-bold uppercase text-gray-500 opacity-10">
-              Why Choose Us
+              {t("why_choose_us")}
             </h2>
           </div>
         </AnimatedComponent>

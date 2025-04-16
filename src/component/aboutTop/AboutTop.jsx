@@ -1,8 +1,9 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-const AboutTop = ({img}) => {
+const AboutTop = ({img, title}) => {
+  const { t } = useTranslation();
   return (
     <section className="navigation">
       <div className="relative">
@@ -13,16 +14,16 @@ const AboutTop = ({img}) => {
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-white via-transparent to-transparent">
           <h2 className="text-3xl lg:text-4xl text-white  font-jost">
-            About Us
+            {t(title) || t("about")}
           </h2>
           <ul className="flex justify-center space-x-2 text-gray-300 mt-4  p-2 px-5">
             <li>
               <Link to="/" className="text-gray-200 text-xl font-jost font-medium">
-                Home
+                {t("home")}
               </Link>
             </li>
             <li className="text-gray-200 text-xl font-jost font-medium">
-              - - About
+              - -    {t(title)||  t("about")}
             </li>
           </ul>
         </div>

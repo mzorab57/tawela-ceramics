@@ -1,57 +1,61 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const AboutColor = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.dir() === 'rtl';
+
   const products = [
     {
       id: 1,
-      name: "Marble",
+      name: t("marble"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/1-1.png",
     },
     {
       id: 2,
-      name: "Limestone",
+      name: t("limestone"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/2-1.png",
     },
     {
       id: 3,
-      name: "Onyx",
+      name: t("onyx"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/3-1.png",
     },
     {
       id: 4,
-      name: "Quartz",
+      name: t("quartz"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/4-1.png",
     },
     {
       id: 5,
-      name: "Granite",
+      name: t("granite"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/5.png",
     },
     {
       id: 6,
-      name: "Travertine",
+      name: t("travertine"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/6.png",
     },
     {
       id: 6,
-      name: "Travertine",
+      name: t("travertine"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/6.png",
     },
   ];
 
   return (
-    <div className="relative text-white font-jost isolate">
+    <div className={`relative text-white font-jost isolate ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Background Container - Fixed within component */}
       <div
         className="absolute inset-0 z-0"
@@ -68,20 +72,21 @@ const AboutColor = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 py-32 ">
+      <div  className="relative z-10 py-32 ">
         <div className="container mx-auto px-4 max-w-[1560px]">
           {/* Header Section */}
           <div className="flex justify-between items-center mb-12">
             <div className="space-y-4">
               <span className="text-yellow-600  text-sm uppercase tracking-wider">
-                --- choose your stone
+                --- {t("choose_your_stone")}
               </span>
-              <h2 className="text-5xl  ">Showroom with Selection</h2>
+              <h2 className="text-5xl  ">{t("showroom_with_selection")}</h2>
             </div>
           </div>
 
           {/* Product Carousel */}
           <Swiper
+          dir="ltr"
             modules={[Autoplay, Pagination]}
             spaceBetween={30}
             slidesPerView={2}
@@ -103,7 +108,7 @@ const AboutColor = () => {
           >
             {products.map((product, index) => (
               <SwiperSlide key={`slide-${index}`}>
-                <div className=" cursor-pointer transform transition-all duration-300 hover:scale-105">
+                <div  className=" cursor-pointer transform transition-all duration-300 hover:scale-105">
                   <div
                     className=" p-6 rounded-xl shadow-sm 
                     transform transition-all duration-300 

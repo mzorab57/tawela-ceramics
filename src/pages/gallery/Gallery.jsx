@@ -14,8 +14,6 @@ import Video from "yet-another-react-lightbox/plugins/video";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-import bg from "/assets/images/gallery/bgre.webp";
-
 import { useTranslation } from "react-i18next";
 
 function Gallery() {
@@ -195,9 +193,9 @@ function Gallery() {
         className="container mx-auto relative z-10 max-w-full"
       >
         <h1 className="text-4xl  whitespace-nowrap text-center  leading-relaxed font-semibold relative  uppercase text-gray-800 my-10 lg:my-0 ml-6 ">
-          Gallery
+          {t("gallery")}
           <h5 className="lg:text-7xl text-6xl whitespace-nowrap  -translate-y-10   leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
-            Gallery
+          {t("gallery")}
           </h5>
         </h1>
 

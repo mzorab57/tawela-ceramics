@@ -62,11 +62,11 @@ const Footer = () => {
               <h3 className="text-2xl font-bold">Tawela Ceramics</h3>
             </div>
             <p className="text-gray-300">
-            Tawela Ceramic Company is one of the largest ceramic distribution companies in Iraq.
+            {t("company_description")}
             </p>
             <div className="flex items-center space-x-2 text-gray-300">
               <i className="fas fa-envelope text-teal-500"></i>
-              Email: 
+              {t("email_label")}: 
               <a 
                 href="mailto:info@tawelaceramic.com"
                 className="hover:text-teal-500 transition-colors"
@@ -79,7 +79,7 @@ const Footer = () => {
           {/* Locations Grid */}
           <div className="lg:col-span-2">
             <h4 className="text-xl font-bold mb-6 border-b border-gray-600 pb-2">
-            Our locations 
+            {t("our_locations")}
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {locations.map((location, index) => (
@@ -111,7 +111,7 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="mt-2 inline-block text-teal-500 hover:underline"
                     >
-                      View On Map
+                      {t("view_on_map")}
                     </a>
                   </div>
                 </div>
@@ -140,6 +140,17 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="mt-12 pt-6 border-t border-gray-700 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} {t("company_name")}. {t("all_rights_reserved")}.</p>
+          <p className="mt-2">
+            Powered by{" "}
+            <a 
+              href="https://wa.me/96407701411893"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-500 hover:underline"
+            >
+              TOP SOFT
+            </a>
+          </p>
         </div>
       </div>
     </footer>

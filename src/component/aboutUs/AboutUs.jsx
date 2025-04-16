@@ -14,35 +14,24 @@ const AboutUs = () => {
 
   return (
     <section name="about" className="relative  bg-gray-100 overflow-hidden  ">
-      <div className="container mx-auto px-4 lg:flex justify-between lg:items-start py-40 max-w-[1650px]   ">
+      <div className="container mx-auto px-4 flex flex-col justify-between lg:items-start py-40 max-w-[1650px]   ">
         {/* Left Text Section */}
-        <div className="w-full lg:w-1/3 mb-10  lg:mb-0 relative md:static  ">
+        <div className="w-full   relative md:static  ">
           <h5 className="text-4xl leading-relaxed font-semibold  uppercase text-gray-800 -translate-y-5 ">
-            Since 2003
+            {t("about_title")}
           </h5>
           <h5 className="text-8xl absolute -top-20 lg:top-20 -translate-x-7  leading-relaxed font-bold  uppercase text-gray-500 opacity-5  ">
-            Since
+            {t("about")}
           </h5>
           <p className="text-gray-600 lg:my-5 w-full  lg:text-2xl  leading-8 ">
-            Ceramic Tawella, a limited building materials trading company, has
-            been operating since 2003. This company specializes in the import
-            and export of all types of ceramic tiles, in all sizes and
-            dimensions. It acts as an agent for many large international ceramic
-            manufacturing companies.
-          </p>
-          <p className="text-gray-600  w-full  lg:text-2xl leading-8 ">
-            The company owns the largest tile warehouse in all of Iraq,
-            importing 2 million square meters of product annually. It also
-            operates several modern branches and showrooms in most Iraqi cities,
-            such as: Sulaymaniyah, Erbil, Kirkuk, and Mosul, where it serves
-            customers.
+            {t("about_description")}
           </p>
           <Link
             to="/about"
             onClick={() => window.scrollTo(0, 0)}
             className="inline-block translate-y-10 z-[1] text-gray-800 bg-white border px-4 py-2 uppercase tracking-wide hover:bg-yellow-500 hover:text-white transition"
           >
-            About Us →
+            {t("about_us")} →
           </Link>
           {/* Background Pattern */}
 
@@ -87,7 +76,7 @@ const AboutUs = () => {
         </div>
 
         {/* Numbers/Stats Section */}
-        <div className="flex flex-wrap lg:flex-nowrap gap-2 w-full justify-start lg:justify-end  lg:-translate-y-14 -translate-y-3">
+        <div className="flex flex-wrap lg:flex-nowrap gap-2 w-full justify-center  ">
           <div className="flex sm:flex-row flex-col my-10">
             {/* Card 1 */}
             <motion.div
@@ -98,13 +87,14 @@ const AboutUs = () => {
                 52
               </h4>
               <p className="text-sm uppercase leading-snug text-gray-600">
-                Awards & <br />
-                Recognitions
+                {t("awards_text")}
               </p>
             </motion.div>
 
+         
             {/* Card 2 */}
             <motion.div
+            dir="ltr"
               style={{
                 clipPath:
                   "polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%)",
@@ -116,8 +106,7 @@ const AboutUs = () => {
                 154
               </h3>
               <p className="text-sm uppercase leading-snug text-gray-600">
-                Completed Projects <br className="hidden lg:block" />
-                in 26+ Cities
+                {t("completed_projects")}
               </p>
             </motion.div>
           </div>
@@ -132,10 +121,10 @@ const AboutUs = () => {
             className="relative  h-80 overflow-y-auto lg:w-80 w-full bg-orange-400 text-white"
           >
             <h2 className="text-8xl shadow-lg font-bold text-white absolute left-5 top-1/4">
-              25
+              {new Date().getFullYear() - 2003}
             </h2>
             <div className="text-xl uppercase leading-snug absolute right-5 bottom-5 font-bold md:text-xl flex-wrap">
-              Years of <br className="hidden lg:block" /> Experience
+             {t("experience_text")}
             </div>
           </motion.div>
         </div>

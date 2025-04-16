@@ -73,21 +73,21 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
               onClick={() => {setOpenMenu(false);  window.scrollTo(0,0)}}
               className="text-2xl hover:text-yellow-500"
             >
-             Portfolio
+              {t("portfolio")}
             </Link>
             <Link
               to="/video"
               onClick={() => {setOpenMenu(false); window.scrollTo(0,0)}}
               className="text-2xl hover:text-yellow-500"
             >
-              Video
+              {t("video")}
             </Link>
             <Link
               to="/ourhistory"
               onClick={() => {setOpenMenu(false); window.scrollTo(0,0)}}
               className="text-2xl hover:text-yellow-500"
             >
-              Our History
+              {t("our_history")}
             </Link>
             <Link
               to="/"
@@ -106,7 +106,7 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
                 }}
                 className="cursor-pointer py-2 px-4 rounded-lg hover:text-yellow-500"
               >
-                {/* <GrLanguage size={25} className="mx-10" /> */}
+                <GrLanguage size={25} className="mx-10" />
                 <div
                   className={`text-center mt-2 py-2 w-28 bg-white border-2 border-yeltext-yellow-500 rounded-lg shadow-xl text-black z-50 transform transition-all duration-500 ease-in-out ${
                     isOpen
@@ -124,13 +124,13 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu, color }) => {
                     className="block px-4 py-2 text-sm hover:bg-yellow-500 cursor-pointer"
                     onClick={() => changeLanguage("ar")}
                   >
-                    Arabic
+                    عربية
                   </div>
                   <div
                     className="block px-4 py-2 text-sm hover:bg-yellow-500 cursor-pointer"
                     onClick={() => changeLanguage("ku")}
                   >
-                    Kurdish
+                    کوردی
                   </div>
                 </div>
               </div>

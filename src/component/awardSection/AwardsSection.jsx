@@ -1,34 +1,33 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AnimatedComponent from "../animations/AnimatedComponent";
 
 const AwardsSection = () => {
+  const { t } = useTranslation();
+
   const awardsData = [
     {
       id: 1,
-      title: "Size: 120*240",
-      description:
-        "Crafted with precision, this slab offers durability and elegance, making it ideal for modern interiors.",
+      title: t("size_120_240"),
+      description: t("size_120_240_desc"),
       link: "https://marblex.peacefulqode.co.in/our-services/",
     },
     {
       id: 2,
-      title: "Size: 120*260",
-      description:
-        "Designed for versatility, this slab enhances both residential and commercial spaces with its refined aesthetics.",
+      title: t("size_120_260"),
+      description: t("size_120_260_desc"),
       link: "https://marblex.peacefulqode.co.in/carpets-rugs/",
     },
     {
       id: 3,
-      title: "Size: 120*300",
-      description:
-        "A perfect choice for those seeking a balance of strength and style, suitable for a variety of applications.",
+      title: t("size_120_300"),
+      description: t("size_120_300_desc"),
       link: "https://marblex.peacefulqode.co.in/about-us/",
     },
     {
       id: 4,
-      title: "Size: 160*320",
-      description:
-        "Featuring the latest in design and technology, this slab is a statement piece for any contemporary setting. ",
+      title: t("size_160_320"),
+      description: t("size_160_320_desc"),
       link: "https://marblex.peacefulqode.co.in/carpets-rugs/",
     },
   ];
@@ -38,13 +37,13 @@ const AwardsSection = () => {
     <section className="w-full  py-16 px-4 max-w-[1500px] overflow-hidden  mx-auto" >
       <div className="flex lg:flex-row flex-col justify-between  ">
         <div className="text-start w-full lg:w-1/3 mb-12 overflow-hidden ">
-          <div className="lg:translate-x-10 ">
-            <span className="text-sm uppercase text-yellow-600">
-              --- Best Slap
+          <div className="lg:translate-x- ">
+            <span className="text-sm uppercase text-yellow-600 ">
+              {t("best_slap")}
             </span>
             <AnimatedComponent animationType="fade-right" dataAosDuration="500">
               <h2 className="text-5xl font-medium mt-2  text-gray-700">
-                Our Slab & Offering+
+                {t("our_slab_offering")}
               </h2>
             </AnimatedComponent>
           </div>
@@ -80,8 +79,9 @@ const AwardsSection = () => {
                 <a
                   // href={award.link}
                   className="inline-flex items-center text-yellow-600 hover:underline mt-2"
+                  dir="ltr"
                 >
-                  View More
+                  {t("view_more")}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

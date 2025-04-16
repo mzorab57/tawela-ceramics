@@ -18,10 +18,10 @@ const VideoWorks = () => {
           <AnimatedComponent animationType="fade-right">
             <div className="relative">
               <h1 className="text-5xl leading-relaxed font-jost font-medium uppercase text-gray-800">
-                {t("Our Video Projects")}
+                {t("our_video_projects")}
               </h1>
               <div className="lg:text-6xl text-6xl absolute lg:-top-4 -top-10 -translate-x-7 leading-relaxed font-bold uppercase text-gray-500 opacity-10">
-                {t("Our Video Projects")}
+                {t("our_video_projects")}
               </div>
             </div>
           </AnimatedComponent>
@@ -41,21 +41,21 @@ const VideoWorks = () => {
             <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
               <VideoCard
                 number="01"
-                title={t("Ceramics")}
+                title={t("ceramic")}
                 description={t("walls and floors")}
                 videoSrc={services_vide}
                 poster="/assets/images/gallery/g(4).JPG"
               />
               <VideoCard
                 number="02"
-                title={t("Porcelain")}
+                title={t("porcelain")}
                 description={t("any environment.")}
                 videoSrc={services_vide2}
                 poster="/assets/images/gallery/g(15).JPG"
               />
               <VideoCard
                 number="03"
-                title={t("Granite")}
+                title={t("granite")}
                 description={t("indoor and outdoor")}
                 videoSrc={services_vide3}
                 poster="/assets/images/gallery/g(16).JPG"

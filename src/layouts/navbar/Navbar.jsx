@@ -36,6 +36,7 @@ const Navbar = () => {
 
   return (
     <div
+    dir="ltr"
       className={`Navbar ${textColorClass}  flex justify-between lg:flex-col overflow-hidden`}
     >
       {/* Main Navbar */}
@@ -107,23 +108,23 @@ const Navbar = () => {
               className="group relative "
             >
               <span className="hover:text-yellow-500 cursor-pointer flex justify-center items-center   py-7 ">
-                Company Profile
+                {t("company_profile")}
                 {/* <MdOutlineKeyboardArrowDown className="pt-1" size={30} /> */}
               </span>
               <ul className="absolute hidden group-hover:block w-56 text-nowra text-xl  top-[5.09rem] border border-gray-500 border-t-0 bg-black/80 duration-700 transition-all transform ease-in-out text-white shadow-lg  p-4 space-y-4">
                 <li>
                   <Link to="/portfolio" className="hover:text-yellow-500 duration-300 transition-all transform ease-in-out ">
-                     Portfolio
+                     {t("portfolio")}
                   </Link>
                 </li>
                 <li>
                   <Link to="/video" className="hover:text-yellow-500 duration-300 transition-all transform ease-in-out">
-                    Video
+                    {t("video")}
                   </Link>
                 </li>
                 <li>
                   <Link to="/ourhistory" className="hover:text-yellow-500 duration-300 transition-all transform ease-in-out">
-                    Our History
+                    {t("our_history")}
                   </Link>
                 </li>
               </ul>

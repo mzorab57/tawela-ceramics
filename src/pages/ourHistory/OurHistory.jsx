@@ -1,46 +1,43 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 import AboutTop from "../../component/aboutTop/AboutTop";
 
 const OurHistory = () => {
+  const { t } = useTranslation();
+
   const timelineData = [
     {
-      title: "Company Foundation",
-      description:
-        "Tawela Ceramics was established in Sulaymaniyah, Kurdistan Region-Iraq. Starting with a vision to provide high-quality ceramic products to the local market, we began our journey with a small showroom and dedicated team.",
+      title: t("history_foundation_title"),
+      description: t("history_foundation_desc"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/11-e1668051633286.jpg",
       year: "2003",
     },
 
     {
-      title: "First Major Expansion",
-      description:
-        "Expanded our operations by opening our first major showroom in Erbil. This marked the beginning of our growth across Kurdistan. We introduced new product lines and established partnerships with leading international manufacturers.",
+      title: t("history_expansion_title"),
+      description: t("history_expansion_desc"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/3-1.jpg",
       year: "2007",
     },
     {
-      title: "International Recognition",
-      description:
-        "Achieved international recognition through partnerships with premium European brands. Introduced exclusive collections of Italian and Spanish ceramics, establishing Tawela as a premium provider in the Kurdish market.",
+      title: t("history_recognition_title"),
+      description: t("history_recognition_desc"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/9.jpg",
       year: "2013",
     },
     {
-      title: "Innovation & Technology",
-      description:
-        "Implemented state-of-the-art digital showroom technology and modern display systems. Launched our website and digital catalog, making it easier for customers to explore our extensive collection of ceramics and tiles.",
+      title: t("history_innovation_title"),
+      description: t("history_innovation_desc"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/10.jpg",
       year: "2018",
     },
     {
-      title: "Market Leadership",
-      description:
-        "Became the leading ceramic provider in Kurdistan with multiple showrooms across major cities. Known for our extensive collection, premium quality, and exceptional customer service. Continuing to innovate and expand our product range.",
+      title: t("history_leadership_title"),
+      description: t("history_leadership_desc"),
       image:
         "https://marblex.peacefulqode.co.in/wp-content/uploads/2022/11/7-1.jpg",
       year: "2023",
@@ -49,7 +46,7 @@ const OurHistory = () => {
 
   return (
     <>
-      <AboutTop img="/assets/images/about/history2.webp" />
+      <AboutTop title={"our_history"}  img="/assets/images/about/history2.webp" />
       <div className="bg-white py-40">
         <div className="container mx-auto relative ">
           {/* Vertical timeline bar */}

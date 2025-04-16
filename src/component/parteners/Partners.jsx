@@ -1,15 +1,15 @@
 import React from "react";
 
-import mayorca from "/assets/images/partners/mayorca.jpg";
-import miran from "/assets/images/partners/miran.png";
-import pak from "/assets/images/partners/pak.jpg";
-import rovar from "/assets/images/partners/rovar.jpg";
-import shacity from "/assets/images/partners/shacity.jpg";
-import shad from "/assets/images/partners/shad.jpg";
-import sharisharan from "/assets/images/partners/sharisharan.jpg";
-import titanictowers from "/assets/images/partners/titanictowers.jpg";
-import suli from "/assets/images/partners/suli.png";
-import homele from "/assets/images/partners/homele.jpg";
+import mayorca from "/assets/images/partners/mayorca.svg";
+import miran from "/assets/images/partners/miran.svg";
+import pak from "/assets/images/partners/pak.svg";
+import rovar from "/assets/images/partners/rovar.svg";
+import shacity from "/assets/images/partners/shacity.svg";
+import shad from "/assets/images/partners/shad.svg";
+import sharisharan from "/assets/images/partners/sharisharan.svg";
+import titanictowers from "/assets/images/partners/titanictowers.svg";
+import suli from "/assets/images/partners/suli.svg";
+import homele from "/assets/images/partners/homele.svg";
 
 const images = [
   mayorca,
@@ -21,17 +21,7 @@ const images = [
   shacity,
   titanictowers,
   suli,
-  homele,
-  mayorca,
-  miran,
-  pak,
-  sharisharan,
-  rovar,
-  shad,
-  shacity,
-  titanictowers,
-  suli,
-  homele,
+  homele
 ];
 
 const Partners = () => {

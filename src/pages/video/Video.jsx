@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoPlaySkipForwardOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
@@ -42,6 +43,7 @@ const projects = [
 ];
 
 const Video = () => {
+  const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -73,11 +75,11 @@ const Video = () => {
                   to="/"
                   className="text-white text-xl font-jost font-medium"
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li className="text-white text-xl font-jost font-medium">
-                - - Video
+                - - {t("video")}
               </li>
             </ul>
           </div>
@@ -85,8 +87,8 @@ const Video = () => {
       </section>
 
       <div className=" w-full text-center py-10">
-        <h1 className="text-2xl text-slate-400 py-3 pb-5">[ our Video ]</h1>
-        <p className="text-4xl lg:text-5xl text-gray-600 font-medium" >Some of Our Works and <br/> Case Studies for Clients</p>
+        <h1 className="text-2xl text-slate-400 py-3 pb-5">{t("video")}</h1>
+        <p className="text-4xl lg:text-5xl text-gray-600 font-medium">{t("video_section_subtitle")}</p>
       </div>
 
       {/* Projects Grid */}

@@ -33,10 +33,10 @@ return (
             <AnimatedComponent animationType="fade-down">
             <div className="relative">
               <h2 className="text-5xl leading-relaxed lg:translate-x-6 font-medium uppercase text-gray-800 -translate-y-5">
-                Our Network
+                {t("our_network")}
               </h2>
               <h2 className="lg:text-7xl text-5xl absolute -top-14 leading-relaxed font-medium uppercase text-gray-400 opacity-15">
-                Our Network
+                {t("our_network")}
               </h2>
             </div>
             </AnimatedComponent>

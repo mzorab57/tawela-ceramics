@@ -51,7 +51,7 @@ const LanguageSwitcher = () => {
         } `}
       >
         {/* English */}
-        {/* <div
+        <div
           className="block px-4 py-2 text-sm hover:bg-primary/30 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
@@ -59,27 +59,27 @@ const LanguageSwitcher = () => {
           }}
         >
           English
-        </div> */}
+        </div>
         {/* Arabic */}
-        {/* <div
+        <div
           className="block px-4 py-2 text-sm hover:bg-primary/30 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
             changeLanguage("ar"); // Arabic
           }}
         >
-          Arabic
-        </div> */}
+          عربية
+        </div>
         {/* Kurdish */}
-        {/* <div
+        <div
           className="block px-4 py-2 text-sm hover:bg-primary/30 cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
             changeLanguage("ku"); // Kurdish
           }}
         >
-          Kurdish
-        </div> */}
+          کوردی
+        </div>
       </div>
     </div>
   );

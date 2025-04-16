@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AnimatedComponent from "../../component/animations/AnimatedComponent";
 import foolr from "/assets/images/icon/floor.png";
 import tile from "/assets/images/icon/tiles.png";
@@ -6,24 +7,26 @@ import trowel from "/assets/images/icon/trowel.png";
 import { Link } from "react-router-dom";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const featuresData = [
     {
       id: 1,
       icon: foolr,
-      title: "CERAMIC",
-      description: "Example View ",
+      title: t("ceramic"),
+      description: t("view_example"),
     },
     {
       id: 2,
       icon: trowel,
-      title: "PORCELAIN",
-      description: "Example View ",
+      title: t("porcelain"),
+      description: t("view_example"),
     },
     {
       id: 3,
       icon: tile,
-      title: "GRANITE",
-      description: "Example View ",
+      title: t("granite"),
+      description: t("view_example"),
     },
   ];
 
@@ -33,42 +36,34 @@ const Services = () => {
         <AnimatedComponent animationType="fade-right" dataAosDuration="500">
           <div className="w-full py-10">
             <h1 className="text-5xl pb-8 leading-relaxed font-jost font-medium relative uppercase text-gray-800 ">
-              Products
+              {t("products")}
               <h5 className="lg:text-7xl text-6xl   absolute lg:-top-4 -top-10   -translate-x-7  leading-relaxed font-bold  uppercase text-gray-500 opacity-10  ">
-                Products
+                {t("products")}
               </h5>
             </h1>
             <div className=" lg:mb-16 lg:text-xl lg:max-w-xl  text-slate-600">
-              At{" "}
+              {t("products_intro_1")}{" "}
               <span className="font-medium font-jost text-gray-600 text-xl">
-                Tawela Ceramic{" "}
+                {t("company_name")}{" "}
               </span>{" "}
-              , we offer a premium selection of ceramic, granite, and porcelain
-              products, designed to elevate any space with elegance and
-              durability.
+              {t("products_intro_2")}
               <p className=" py-5">
                 <span className="font-medium font-jost text-gray-600 text-2xl">
-                  Ceramic:{" "}
+                  {t("ceramic")}:{" "}
                 </span>{" "}
-                Versatile and stylish, our ceramic products combine beauty with
-                practicality, making them ideal for walls, floors, and
-                decorative applications.
+                {t("ceramic_description")}
               </p>
               <p className=" pb-5">
                 <span className="font-medium font-jost text-gray-600 text-2xl">
-                  Granite:{" "}
+                  {t("granite")}:{" "}
                 </span>{" "}
-                Known for its natural strength and stunning textures, our
-                granite collection adds timeless sophistication to any
-                environment.
+                {t("granite_description")}
               </p>
               <p>
                 <span className="font-medium font-jost text-gray-600 text-2xl">
-                  Porcelain:{" "}
+                  {t("porcelain")}:{" "}
                 </span>{" "}
-                With superior durability and water resistance, our porcelain
-                products are perfect for both indoor and outdoor use, offering a
-                sleek and modern aesthetic.
+                {t("porcelain_description")}
               </p>
             </div>
           </div>

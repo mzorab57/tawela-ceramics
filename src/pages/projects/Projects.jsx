@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CategoryFilter from "../../component/categoryFilter/CategoryFilter ";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 const projects = [
   {
@@ -166,6 +168,7 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -190,12 +193,12 @@ const Projects = () => {
   // Helper function to return display name based on project category
   const getCategoryLabel = (category) => {
     switch (category) {
-      case "ceramics":
-        return "Ceramics";
-      case "granit":
-        return "Granite";
+      case "ceramic":
+        return t("ceramic");
+      case "granite":
+        return t("granite");
       case "porcelain":
-        return "Porcelain";
+        return t("porcelain");
       // For "ceramics" (which used to be Bsrawa), we now return an empty string.
       // You could also choose to return a different label if desired.
       default:
@@ -228,20 +231,20 @@ const Projects = () => {
                   to="/"
                   className="text-white text-xl font-jost font-medium"
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li className="text-white text-xl font-jost font-medium">
-                - - Portfolio
+                - - {t("portfolio")}
               </li>
             </ul>
           </div>
         </div>
       </section>
       <div className=" w-full text-center py-10">
-        <h1 className="text-2xl text-slate-400 py-3">[ our portfolio ]</h1>
+        <h1 className="text-2xl text-slate-400 py-3">{t("portfolio")}</h1>
         <p className="text-4xl lg:text-5xl text-gray-600 font-medium">
-          Some of Our Works and <br /> Case Studies for Clients
+          {t("project_section_subtitle")}
         </p>
       </div>
       {/* Filter Options */}
